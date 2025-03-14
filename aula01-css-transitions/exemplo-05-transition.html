@@ -39,7 +39,7 @@
             border: 0px;
             border-bottom: 0px;
             padding-bottom: 10px;
-            transition: padding-top 0.5s ease, box-shadow 1 s linear;
+            transition: padding-top 0.5s ease, box-shadow 1s linear;
         }
 
         button:active {
@@ -63,7 +63,7 @@
             font-family: sans-serif;
             color: #1e1e1e;
             transform: translateY(-50px);
-            opacity: 0.5;
+            opacity: 0;
             transition: all 1s ease-in;
         }
 
@@ -92,8 +92,9 @@
 
         input:focus::placeholder
         {
-            text-shadow: 0px 0px 2px #1e1e1e;
-            color:#808080;
+            text-shadow: 0px 0px 10px #1e1e1e;
+            /*color:#808080;*/
+            color:#dddddd;
             opacity: 0.5;
         }
 
@@ -101,7 +102,7 @@
             text-shadow: 0px 0px 0px #1e1e1e;
             text-decoration: solid;
             font-style: bolder;
-            transition: text-shadow 4s ease;
+            transition: text-shadow 4s ease, color 4s ease;
             color:#1e1e1e;
             font-style: bold;
             opacity: 1;
@@ -111,6 +112,7 @@
             font-style: bolder;
             padding: 0px;
             opacity: 1;
+            color: red;
             transition: all 1s ease-out;
         }
         /*end INPUT*/
