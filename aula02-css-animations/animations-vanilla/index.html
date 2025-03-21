@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="assets/img/fav.ico">
+	<!-- Google Font Press Start 2P -->
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<!-- latest -->
+	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+	<style>
+
+		h1,h1 a{
+			font-size: min(32px,5vw);
+		}
+		h1 a{
+			color:#cc4141;
+		}
+		h1 a:hover{
+			color:#92cc41;
+			text-decoration: none;
+		}
+		li{
+			margin: 5px 0;
+		}
+		li a{
+			font-size: 2vw;
+		}
+		a{
+			font-size: 32px;
+		}
+		li:has(a:hover) {
+			background-color: #ccffaa;
+			border-radius: 5px;
+			transition: 1s;
+		}
+		li a:hover {
+			text-decoration: none;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+		}
+		.nes-btn {
+			font-size: 2vw;
+			border: solid 0px black;
+		}
+
+		.nes-text {
+			text-align: center;
+		}
+	</style>
+	<title>CSTSI-LPAW Aula 03: Exemplos de Aula</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="nes-text is-success">CSTSI - AEI 
+			<a class="is-success" target="_blank" href="">Aula 02</a>
+		</h1>
+		<ul class="nes-list"></ul>
+	</div>
+	<script type="module" src="src/main.js"></script>
+</body>
+
+</html>

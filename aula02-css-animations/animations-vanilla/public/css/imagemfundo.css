@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: none;
+    object-position: 100% 0%;
+    /* border-radius: 25%; */
+    animation-name: img-sprite;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-play-state: paused;
+}
+
+@keyframes img-sprite {
+
+    0%,
+    100% {
+        object-position: 75% 90%;
+    }
+
+    25% {
+        object-position: 75% 85%;
+    }
+
+    50% {
+        object-position: 75% 80%;
+    }
+}
+
+div:hover img {
+    animation-play-state: running;
+}

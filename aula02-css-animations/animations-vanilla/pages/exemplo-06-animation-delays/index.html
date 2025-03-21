@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSTI-4SEM-LPAW-Aula 02 | CSS3 Animação: Exemplo 06</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        .loader div {
+            width: 25px;
+            height: 25px;
+        }
+
+        #bit1 {
+            background-color: lightgray;
+            animation: b1 1s linear .9s infinite;
+        }
+
+        #bit2 {
+            transform: translate(0px, -25px);
+            background-color: gray;
+            animation: b2 1s linear .7s infinite;
+        }
+
+        #bit3 {
+            transform: translateY(-50px);
+            background-color: black;
+            animation: b3 1s linear .5s infinite;
+        }
+
+        @keyframes b1 {
+            0%,100% {transform: translateY(0px);}
+            50% {
+                transform: translateY(50px);
+                opacity: 0.5;
+            }
+        }
+        @keyframes b2 {
+            0%,100% {transform: translateY(-25px);}
+            50% {transform: translateY(25px);
+                opacity: 0.5;
+            }
+        }
+        @keyframes b3 {
+            0%,100% {transform: translateY(-50px);}
+            50% {transform: translateY(0px)}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <div id="bit1"></div>
+        <div id="bit2"></div>
+        <div id="bit3"></div>
+    </div>
+</body>
+
+</html>

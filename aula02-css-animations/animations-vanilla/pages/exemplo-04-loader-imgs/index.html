@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSTI-4SEM-LPAW-Aula 02 | CSS3 Animação: Exemplo 04</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+            .loader{
+                width: 100px;
+                height: 100px;
+                background-size: contain;
+                background-image: url(../../public/assets/img/loader.png);
+                animation-name: loading;
+                animation-duration: 500ms;
+                animation-timing-function: step-end;
+                /*animation-timing-function: linear;*/
+                animation-iteration-count: infinite;
+                animation-play-state: running;
+            }
+
+            @keyframes loading {
+                0%,100%{ transform: rotate(0deg);}
+                25%{ transform: rotate(90deg);}
+                50%{ transform: rotate(180deg);}
+                75%{ transform: rotate(270deg);}
+            }
+
+            /*.loader:hover{
+				animation-play-state: running;
+			}*/
+        </style>
+    </head>
+    <body>
+        <div class="loader"></div>
+    </body>
+</html>
