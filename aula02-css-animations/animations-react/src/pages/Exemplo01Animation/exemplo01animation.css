@@ -1,0 +1,12 @@
+#exemplo1{
+    width: 100vw;
+    height: 100vh;
+    animation-name: brapel;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes brapel {
+    from{ background: linear-gradient(red,black);}
+    to{ background: linear-gradient(blue,#ffff00);}
+}
