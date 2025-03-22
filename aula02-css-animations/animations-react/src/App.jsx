@@ -32,8 +32,8 @@ function App() {
           ))}
         </ul>
         <div>
-          <img src="assets/svgs/react.svg" alt="react" class="nes-avatar is-large logo react-spin" />
-          <img src="assets/svgs/vite.svg" alt="vite" class="nes-avatar is-large logo vite-logo" />
+          <img src="assets/svgs/react.svg" alt="react" className="nes-avatar is-large logo react-spin" />
+          <img src="assets/svgs/vite.svg" alt="vite" className="nes-avatar is-large logo vite-logo" />
         </div>
       </div>
     </>
