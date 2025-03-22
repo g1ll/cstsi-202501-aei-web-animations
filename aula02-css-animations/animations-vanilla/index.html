@@ -10,52 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<!-- latest -->
 	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-	<style>
-
-		h1,h1 a{
-			font-size: min(32px,5vw);
-		}
-		h1 a{
-			color:#cc4141;
-		}
-		h1 a:hover{
-			color:#92cc41;
-			text-decoration: none;
-		}
-		li{
-			margin: 5px 0;
-		}
-		li a{
-			font-size: 2vw;
-		}
-		a{
-			font-size: 32px;
-		}
-		li:has(a:hover) {
-			background-color: #ccffaa;
-			border-radius: 5px;
-			transition: 1s;
-		}
-		li a:hover {
-			text-decoration: none;
-		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			align-content: center;
-		}
-		.nes-btn {
-			font-size: 2vw;
-			border: solid 0px black;
-		}
-
-		.nes-text {
-			text-align: center;
-		}
-	</style>
-	<title>CSTSI-LPAW Aula 03: Exemplos de Aula</title>
+	<link href="src/style.css" rel="stylesheet" />
+	<title>CSTSI-AEI Aula 02: Exemplos de Animação com CSS3</title>
 </head>
 
 <body>
@@ -64,6 +20,10 @@
 			<a class="is-success" target="_blank" href="">Aula 02</a>
 		</h1>
 		<ul class="nes-list"></ul>
+		<div>
+			<img src="assets/svgs/javascript.svg" alt="javascript" class="nes-avatar is-large">
+			<img src="assets/svgs/vite.svg" alt="vite" class="nes-avatar is-large">
+		</div>
 	</div>
 	<script type="module" src="src/main.js"></script>
 </body>
