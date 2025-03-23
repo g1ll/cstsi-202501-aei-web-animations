@@ -4,7 +4,7 @@ const Exemplo02Shortened = () => {
         <>
             <style>
                 {`
-                   .grenal{
+                   body{
                         width: 100vw;
                         height: 100vh;
                         animation: grenal2 1s ease infinite; 
@@ -28,7 +28,7 @@ const Exemplo02Shortened = () => {
                     }
                 `}
             </style>
-            <div className='grenal'></div>
+            {/* <div className='grenal'></div> */}
         </>)
 }
 
