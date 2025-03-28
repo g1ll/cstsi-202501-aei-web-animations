@@ -40,3 +40,9 @@ li a:hover {
 .nes-text {
   text-align: center;
 }
+
+.logo {
+  width: 100px;
+  will-change: filter;
+  transition: filter 300ms;
+}
