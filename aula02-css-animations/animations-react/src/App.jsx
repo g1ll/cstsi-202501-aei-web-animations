@@ -19,7 +19,7 @@ function App() {
     <>
       <div className="container">
         <h1 className="nes-text is-success">CSTSI - AEI
-          <a className="is-success" target="_blank" href="#">Aula 02</a>
+          <a className="is-success" target="_blank" href="#">&nbsp;Aula 02</a>
         </h1>
         <ul className="nes-list">
           {
@@ -34,8 +34,8 @@ function App() {
           }
         </ul>
         <div>
-          <img src="assets/svgs/react.svg" alt="react" className="nes-avatar is-large logo react-spin" />
-          <img src="assets/svgs/vite.svg" alt="vite" className="nes-avatar is-large logo vite-logo" />
+          <img src="assets/svgs/react.svg" alt="react" className=" logo react-spin" />
+          <img src="assets/svgs/vite.svg" alt="vite" className=" logo vite-logo" />
         </div>
       </div>
     </>
