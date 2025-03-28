@@ -6,8 +6,8 @@ function App() {
   const links = [
     { path: 'exemplo-01-animation', title: 'Propriedade Animation' },
     { path: 'exemplo-02-abreviado', title: 'Animation Abreviada' },
-    { path: 'exemplo-03-porcentagens', title: 'Frames Intermediários' },
-    { path: 'exemplo-04-loader-imgs', title: 'Animação de Imagens' },
+    { path: 'exemplo-03-percentages', title: 'Frames Intermediários' },
+    { path: 'exemplo-04-loader-image', title: 'Animação de Imagens' },
     { path: 'exemplo-05-imgs-sprites', title: 'Animação com Sprites' },
     { path: 'exemplo-06-animation-delays', title: 'Combinando Animações' },
     { path: 'exemplo-07-delays-hover', title: 'Gatilho com :hover' },
