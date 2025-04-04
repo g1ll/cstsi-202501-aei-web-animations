@@ -1,0 +1,40 @@
+body {
+    background-color: #333232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    height: 75vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logoAnimatecss {
+    width: 200px;
+    height: 150px;
+    border-radius: 10% 10%;
+    background-image: url('../../assets/img/animatecss-opengraph.jpg');
+    background-size: 100% 100%;
+    opacity: 0;
+  }
+
+  .logoJs{
+    background-image: url('../../assets/svgs/javascript.svg');
+    background-size: 100% 100%;
+    width: 100px;    
+    height: 100px;
+  }
+
+  .logoVite{
+    background-image: url('../../assets/svgs/vite.svg');
+    background-size: 100% 100%;
+    width: 100px;    
+    height: 100px;
+  }
+
+

@@ -1,15 +1,18 @@
 import animatecssLogo from '/assets/img/animatecss-opengraph.jpg?url'
 
 const links = [
-  { path: 'exemplo-01-animation', title: 'Exemplo 01: Aplicando Animação com Classe' },
-  { path: 'exemplo-02-keyframes', title: 'Exemplo 02: Animation @Keyframes' },
+  { path: 'exemplo-01-animation', title: 'Aplicando Animação com Classe' },
+  { path: 'exemplo-02-keyframes', title: 'Animation @Keyframes' },
+  { path: 'exemplo-03-custom-properties', title: 'CSS Variables' },
+  { path: 'exemplo-04-utility-class', title: 'Utility Class' },
+
 ]
 
 const DOMlist = document.querySelector('ul')
-links.forEach((item) => DOMlist.innerHTML += `
+links.forEach((item,index) => DOMlist.innerHTML += `
   <li>
     <a href="/pages/${item.path}/index.html">
-      ${item.title}
+      Exemplo ${index+1}: ${item.title}
     </a>
   </li>
 ` )
