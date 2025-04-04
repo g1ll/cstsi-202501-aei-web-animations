@@ -51,6 +51,8 @@
 
     .container h1 {
       color:transparent;
+      width: 75%;
+      height: 50px;
     }
 
     .skeleton {
@@ -87,7 +89,7 @@
   <div class="nes-container with-title examples-containers">
     <span class="title">Exemplo 9</span>
     <div class="container">
-      <h1 class="cssanimated skeleton">Exemplo Skeleton</h1>
+      <h1 class="cssanimated skeleton"></h1>
       <div class="skeleton cssanimated"></div>
     </div>
   </div>
@@ -98,14 +100,16 @@
   </div>
 
   <script>
-      setTimeout(() => {
+     let timer = setTimeout(() => {
         let title = document.querySelector('h1');
         title.style.color = 'black';
         title.classList.remove('cssanimated','skeleton');
+        title.innerHTML = 'Exemplo Skeleton!!';
 
         let divImage = document.querySelector('.container div');
         divImage.classList.remove('cssanimated','skeleton');
         divImage.innerHTML = '<img src="/assets/img/image.jpg" alt="barcos" width="200" height="200">';
+        clearTimeout(timer);
       }, 5000);
   </script> 
 </body>
