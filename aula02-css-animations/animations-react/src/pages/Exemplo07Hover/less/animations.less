@@ -1,0 +1,16 @@
+.setAnimation(@name, @duration, @delay, @tpx, @opacity, @isPaused) {    
+    animation: @name @duration linear @delay infinite if((@isPaused = 1), paused, running);
+    @keyframes @name {
+        0%, 100% { 
+            transform: translateX(calc(-25px + @tpx)); 
+        }
+        50% { 
+            transform: translateX(calc(25px + @tpx));
+            opacity: @opacity;
+        }
+    }
+}
+
+.setTransform(@tpx) {
+    transform: translateX(calc(6px + @tpx));
+}

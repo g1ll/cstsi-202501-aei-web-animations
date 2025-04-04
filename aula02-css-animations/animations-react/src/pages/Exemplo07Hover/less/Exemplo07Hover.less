@@ -1,0 +1,49 @@
+@import "animations";
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+
+    div {
+        width: 25px;
+        height: 25px;
+    }
+
+    &:hover {
+        #bit1,
+        #bit2,
+        #bit3 {
+            animation-play-state: running;
+        }
+    }
+}
+
+#bit1 {
+    background-color: lightgray;
+    .setTransform(25px);
+    .setAnimation(b1, 1s, .9s, 25px, .5, 1);
+}
+
+#bit2 {
+    background-color: gray;
+    .setTransform(0px);
+    .setAnimation(b2, 1s, .7s, 0px, .5, 1);
+}
+
+#bit3 {
+    background-color: black;
+    .setTransform(-25px);
+    .setAnimation(b3, 1s, .5s, -25px, 1, 1);
+}

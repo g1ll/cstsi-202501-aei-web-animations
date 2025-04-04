@@ -1,0 +1,9 @@
+@mixin setAnimation($name, $duration, $delay,$py1,$py2,$opacity) {
+    animation: #{$name} #{$duration} linear #{$delay} infinite;
+    @keyframes #{$name} {
+        0%,100% {transform: translateY(calc(-25px + $py1));}
+        50% {transform: translateY(calc(25px + $py2));
+            opacity: $opacity;
+        }
+    }
+}

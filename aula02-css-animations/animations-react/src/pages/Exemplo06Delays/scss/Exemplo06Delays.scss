@@ -1,0 +1,39 @@
+@use "animations.scss";
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    
+    div {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+#bit1 {
+    background-color: lightgray;
+    @include animations.setAnimation(b1, 1s, .9s, 25px, 25px, .5);
+}
+
+#bit2 {
+    transform: translate(0px, -25px);
+    background-color: gray;
+    @include animations.setAnimation(b2, 1s, .7s, 0px, 0px,.5);
+}
+
+#bit3 {
+    transform: translateY(-50px);
+    background-color: black;
+    @include animations.setAnimation(b3, 1s, .5s, -25px, -25px, 1);
+}
