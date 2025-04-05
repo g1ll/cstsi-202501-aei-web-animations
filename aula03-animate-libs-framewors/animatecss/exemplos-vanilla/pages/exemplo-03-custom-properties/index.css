@@ -1,7 +1,8 @@
 
 :root {
     --animate-duration: .5s;
-    /* --animate-delay: 0.9s; */
+    /* Esta variável multiplica o delay aplicado pela classe utilitária animate__delay-[n]s*/
+    --animate-delay: 4s;
   }
 
 /* .animate__animated.animate__fadeIn {
