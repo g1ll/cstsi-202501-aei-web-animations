@@ -37,8 +37,8 @@ export function startAnimations() {
     
     animate($container, {
         opacity: [0, 1],
-        duration: 4000,
-        delay: 1000,
+        duration: 1000,
+        delay: 500,
         easing: 'easeInOutQuad',
     });
 

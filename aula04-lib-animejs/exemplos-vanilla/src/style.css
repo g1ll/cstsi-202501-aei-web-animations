@@ -72,7 +72,8 @@ a{
     grid-template-columns: repeat(100, 1fr);
     align-self: center;
     justify-self: center;
-    margin: 1rem;
+    margin: 0;
+    margin-bottom: .5rem;
   }
   
   div{
