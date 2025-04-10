@@ -27,13 +27,39 @@ export function listLettersAnimation($target,count=10){
 }
 
 
+function lettersAnimation($target){
+    animate($target,{
+        // Property keyframes
+        y: [
+            { to: '-.25rem', ease: 'outExpo', duration: 600 },
+            { to: 0, ease: 'outBounce', duration: 800, delay: 10 }
+        ],
+        scale: [{
+            to: '1',
+            duration: 500,
+        },
+        {
+            to: '1.25',
+            duration: 500,
+        },{
+            to: '1',
+            duration: 500,
+        }],
+        delay: (_, i) => i * 25,
+        ease: 'inOutCirc',
+    });
+}
+
 export function startAnimations() {
     const $container = $('.container');
     const $listElements = $('li');
     const [$jsLogo, $viteLogo] = $('.logo');
     const $animeJsLogo = $('.logoAnimeJs');
     console.log($listElements)
-    $listElements.forEach((_,index) => listLettersAnimation($(`li:nth-of-type(${index+1}) span`),index+1));
+    $listElements.forEach((li,index) => {
+        listLettersAnimation($(`li:nth-of-type(${index+1}) span`),index+1)
+        li.onmouseenter = () => lettersAnimation($(`li:nth-of-type(${index+1}) span`))
+    });
     
     animate($container, {
         opacity: [0, 1],
