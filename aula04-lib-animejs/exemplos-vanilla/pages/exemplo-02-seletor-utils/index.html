@@ -11,7 +11,7 @@
 	<!-- latest -->
 	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>
-	<title>CSTSI-AEI Aula 04: Introdução a Biblioteca AnimeJS</title>
+	<title>CSTSI-AEI Aula 04: Seleção de Elementos com o Utils da AnimeJS</title>
 	<style>
 		body {
 			display: flex;
@@ -40,23 +40,12 @@
 
 <body>
 	<h2 class="nes-text is-primary">
-		Exemplos de Introdução a Biblioteca
+		Exemplo de Animação SVG com a Utils
 		<a href="https://animejs.com/documentation/" target="_blank">AnimeJS</a>
 	</h2>
 
 
 
-	<div class="nes-container with-title examples-containers">
-		<span class="title">
-			Exemplo 1.1
-		</span>
-		<div id="circle"></div>
-	</div>
-
-
-
-
-
 
 
 
@@ -64,7 +53,7 @@
 
 
 	<div class="nes-container with-title examples-containers">
-		<span class="title">Exemplo 1.2</span>
+		<span class="title">Exemplo 2.1</span>
 		<div id="svg-container">
 			<svg id='sgv-geometry' width="98" height="100" viewBox="0 0 98 100" fill="none"
 				xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +172,7 @@
 				const anime2 = animate(
 					$svgTarget, //alvo da animação (elemento svg)
 					{
-						fill: [							//propriedade a ser modificada (fill)
+						fill: [//propriedade a ser modificada (fill)
 							{ to: '#00ff00', duration: 2000 },
 							{ to: '#0000ff', duration: 2000 },
 							{ to: '#ff0000', duration: 2000 },
