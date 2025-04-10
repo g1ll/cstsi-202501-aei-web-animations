@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+	<!-- Google Font Press Start 2P -->
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<!-- latest -->
+	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>
+	<title>CSTSI-AEI Aula 04: Introdução a Biblioteca AnimeJS</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.examples-containers {
+			margin-top: 5%;
+			width: 50%;
+		}
+
+		.btn {
+			margin: 15px;
+			width: 200px;
+		}
+
+		#circle {
+			width: 40px;
+			height: 40px;
+			background-color: blue;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<h2 class="nes-text is-primary">
+		Exemplos de Introdução a Biblioteca
+		<a href="https://animejs.com/documentation/" target="_blank">AnimeJS</a>
+	</h2>
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 1.1</span>
+		<div id="circle"></div>
+	</div>
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 1.2</span>
+		<div id="svg-container">
+			<svg id='sgv-geometry' width="98" height="100" viewBox="0 0 98 100" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M0 49C0 21.938 21.938 0 49 0V0C76.062 0 98 21.938 98 49V51C98 78.062 76.062 100 49 100V100C21.938 100 0 78.062 0 51L0 49Z"
+					fill="#ff0000" />
+			</svg>
+		</div>
+	</div>
+
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 1.3</span>
+		<div id="container-svg-2">
+			<!--<svg id='sgv-anime3' width="98" height="100" viewBox="0 0 98 100" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M0 49C0 21.938 21.938 0 49 0V0C76.062 0 98 21.938 98 49V51C98 78.062 76.062 100 49 100V100C21.938 100 0 78.062 0 51L0 49Z"
+					fill="#ff0000" />
+			</svg> -->
+			<!--<svg id='sgv-anime3' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+				role="img" class="iconify iconify--logos" width="100" height="100" preserveAspectRatio="xMidYMid meet"
+				viewBox="0 0 256 228">
+				<path fill="#00D8FF"
+					d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z">
+				</path>
+			</svg> -->
+
+			<!--<svg id='svg_js_logo' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				aria-hidden="true" role="img" class="iconify iconify--logos" width="150" height="150"
+				preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+				<path fill="#F7DF1E" d="M0 0h256v256H0V0Z"></path>
+				<path
+					d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574">
+				</path>
+				<path id="ecma" style="opacity:1" d="M25 47H0V0H25V8.1656H9.20426V18.4848H23.9014V26.6504H9.20426V38.7702H25V47Z" fill="black"/>
+			</svg>-->
+
+			<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g id="svg_js_logo">
+					<path d="M0 0H100V100H0V0Z" fill="#F7DF1E" />
+					<path style="opacity:1"
+						d="M33.946 78.9359L26.2937 83.5672C28.5089 88.266 32.8722 92.1586 40.3898 92.1586C48.714 92.1586 54.4195 87.7281 54.4195 77.9949V45.9098H45.0222V77.8621C45.0222 82.5605 43.075 83.7684 39.9871 83.7684C36.7656 83.7684 35.4226 81.5535 33.946 78.9359Z"
+						fill="black" />
+					<path style="opacity:0"
+						d="M53.378 91.3746H27V45.6567H53.378V53.5995H36.7116V63.6373H52.2188V71.5801H36.7116V83.3693H53.378V91.3746Z"
+						fill="black" />
+					<path style="opacity:1"
+						d="M59.5238 82.5602L67.1754 78.1301C69.1898 81.4195 71.8078 83.8359 76.439 83.8359C80.3332 83.8359 82.816 81.8891 82.816 79.2039C82.816 75.982 80.2652 74.8406 75.9691 72.9617L73.6203 71.9539C66.8402 69.0684 62.3429 65.4434 62.3429 57.791C62.3429 50.7426 67.7129 45.3723 76.1039 45.3723C82.0781 45.3723 86.3742 47.4535 89.4617 52.8906L82.1445 57.5898C80.5332 54.7035 78.7886 53.5625 76.1035 53.5625C73.3511 53.5625 71.6058 55.3078 71.6058 57.5898C71.6058 60.409 73.3512 61.5508 77.3785 63.2961L79.7277 64.3027C87.716 67.7266 92.2133 71.2168 92.2133 79.0699C92.2133 87.5285 85.5679 92.1598 76.6402 92.1598C67.914 92.1598 62.2758 87.9977 59.5238 82.5602Z"
+						fill="black" />
+				</g>
+			</svg>
+		</div>
+	</div>
+
+
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 1.4</span>
+		<div id="container-svg-3">
+			<svg width="40" height="29" viewBox="0 0 40 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g id="AnimationButtonPoligon">
+					<rect width="40" height="29" fill="white" />
+					<g id="btnOpen">
+						<path d="M5 3.72778H35V8.72778H5V3.72778Z" fill="#0a0909" fill-opacity="0.85" />
+						<path d="M5 11.7278H35V16.7278H5V11.7278Z" fill="#0a0909" fill-opacity="0.85" />
+						<path d="M5 19.7278H35V24.7278H5V19.7278Z" fill="#0a0909" fill-opacity="0.85" />
+					</g>
+					<path id="btnClose"
+						d="M11.5 2L20.25 10.7278L29 2L32.5 5.5L24 14.5L32.5 23.2278L29 27L20.25 17.5L11 27L7.5 23.5L16.5 14.2278L8 5.5L11.5 2Z"
+						fill="#0a0909" style="opacity:0" />
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<div>
+		<a href="/">
+			<button type="button" title='Voltar ao início!' class="nes-btn is-error btn">Voltar</button>
+		</a>
+		<div>
+			<script>
+				const { animate, utils, svg } = anime;
+
+				//Animação 1.1
+				// document.querySelector('#circle').addEventListener('click',()=>{
+				animate('#circle', { 		//alvo da animação, pode ser mais de um
+					translateX: 250,			//propriedade a ser modificada (camelCase)
+					// borderRadius:50,			//propriedade css em camelCase
+					backgroundColor: '#00ff00',	//propriedade css em camelCase
+					duration: 500,				//duração em  milisegundos (ms)
+					direction: 'alternate',		//direção da animação (animation) 
+					loop: true,					//numero de iterações (animation-iteration-count)
+					// easing: 'easeInBounce'		//função de tempo (animation-timing-function)
+					easing: 'easeInOutCirc'		//função de tempo (animation-timing-function)
+				});
+				//   })
+
+
+				//Animação 1.2
+				const $ = utils.$;
+				const $svgTarget = $('#sgv-geometry path');
+
+				const anime2 = animate(
+					$svgTarget, //alvo da animação (elemento svg)
+					{
+						fill: [							//propriedade a ser modificada (fill)
+							{ to: '#00ff00', duration: 2000 },
+							{ to: '#0000ff', duration: 2000 },
+							{ to: '#ff0000', duration: 2000 },
+						],
+						// duration:1000, 			//duração em ms
+						loop: true, 			//animação em loop (animation-count:infinite)
+						//direction: 'normal',	//animação em loop (animation-count:infinite)
+						autoplay: false,
+						// easing: 'easeInOutExpo'	//função de tempo  (animation-timing-function)
+						// easing: 'linear'	//função de tempo  (animation-timing-function)
+						easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
+					});
+
+				$svgTarget[0].onclick = () => {
+					anime2.play();
+				}
+				//Animação 1.3
+				const [$squarePath, $jsPath, $ecmaPath, $sPath] = $('#svg_js_logo path');
+
+				const anime3 = animate($squarePath,  //alvo da animação (elemento svg
+					{
+						// fill:[							//propriedade a ser modificada (fill)
+						// 	{value:'#ff0000', duration:1000},
+						// 	{value:'#00ff00', duration:2000},
+						// 	{value:'#0000ff', duration:2000}
+						// ],
+						keyframes: [
+							{ fill: '#ff0000' },
+							{ fill: '#00ff00' },
+							{ fill: '#0000ff' }
+						],
+						duration: 1000, 			//duração em ms
+						loop: true, 			//animação em loop (animation-count:infinite)
+						direction: 'alternate',
+						autoplay: false,
+						// easing: 'easeInOutExpo'	//função de tempo  (animation-timing-function)
+						// easing: 'linear'	//função de tempo  (animation-timing-function)
+						easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
+					});
+
+
+				const anime4 = animate($jsPath,  //alvo da animação (elemento svg
+					{
+						keyframes: [
+							{ d: svg.morphTo($jsPath), duration: 1000 },
+							{ d: svg.morphTo($ecmaPath), duration: 1500 },
+						],
+						loop: true, 			//animação em loop (animation-count:infinite)
+						direction: 'alternate',
+						autoplay: false,
+						alternate: true,
+						// easing: 'easeInOutExpo'	//função de tempo  (animation-timing-function)
+						// easing: 'linear'	//função de tempo  (animation-timing-function)
+						easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
+					});
+
+
+
+				document.querySelector('#svg_js_logo')
+					.addEventListener('mouseenter', () => {
+						// anime3.duration = 1000;
+						//anime3.autoplay = true;
+						anime3.play();
+						anime4.play();
+					})
+
+				$('#svg_js_logo')[0].onmouseleave = () => anime3.pause();
+
+				anime3.onPause = () => {
+					const [path] = anime3.targets;
+
+					path.setAttribute('fill', '#F7DF1E');
+					anime4.pause();
+				}
+
+
+
+				const anime5 = animate($("#btnOpen"),
+					{
+						opacity: 0,
+						duration: 500,
+						autoplay: false,
+						easing: 'linear'
+					});
+
+				const anime6 = animate($("#btnClose"),
+					{
+						opacity: 1,
+						duration: 500,
+						autoplay: false,
+						easing: 'linear'
+					});
+
+				$("#container-svg-3 svg")[0].onclick = () => {
+					if (anime5.targets[0].style.opacity == 1) {
+						anime5.play();
+						anime5.onBegin = () => anime6.play()
+						anime6.progress = 0;
+					} else {
+						anime6.reverse();
+						anime6.onBegin = () => anime5.targets[0].style.opacity = 1
+						anime5.progress = 0;
+					}
+				}
+
+			</script>
+</body>
+
+</html>
