@@ -11,7 +11,7 @@
 	<!-- latest -->
 	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>
-	<title>CSTSI-AEI Aula 04: Introdução a Biblioteca AnimeJS</title>
+	<title>CSTSI-AEI Aula 04: Animação Icone SVG com AnimeJS</title>
 	<style>
 		body {
 			display: flex;
@@ -40,23 +40,12 @@
 
 <body>
 	<h2 class="nes-text is-primary">
-		Exemplos de Introdução a Biblioteca
+		Exemplo de Animação SVG com a Utils
 		<a href="https://animejs.com/documentation/" target="_blank">AnimeJS</a>
 	</h2>
 
 
 
-	<div class="nes-container with-title examples-containers">
-		<span class="title">
-			Exemplo 1.1
-		</span>
-		<div id="circle"></div>
-	</div>
-
-
-
-
-
 
 
 
@@ -64,13 +53,28 @@
 
 
 	<div class="nes-container with-title examples-containers">
-		<span class="title">Exemplo 1.2</span>
+		<span class="title">Exemplo 2.1</span>
 		<div id="svg-container">
-			<svg id='sgv-geometry' width="98" height="100" viewBox="0 0 98 100" fill="none"
-				xmlns="http://www.w3.org/2000/svg">
-				<path
-					d="M0 49C0 21.938 21.938 0 49 0V0C76.062 0 98 21.938 98 49V51C98 78.062 76.062 100 49 100V100C21.938 100 0 78.062 0 51L0 49Z"
-					fill="#ff0000" />
+			<?xml version="1.0" encoding="iso-8859-1"?>
+			<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+			<svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+				<circle style="fill:#91DD5A;" cx="256" cy="256" r="256" />
+				<path style="fill:#7ED63F;" d="M256,0c-11.317,0-22.461,0.744-33.391,2.167C348.216,18.53,445.217,125.933,445.217,256
+	s-97.002,237.47-222.609,253.833C233.539,511.256,244.683,512,256,512c141.385,0,256-114.616,256-256S397.385,0,256,0z" />
+				<path style="fill:#FFFFFF;" d="M256,434.643c-43,0-84.443-15.458-116.895-43.568c-0.707-0.612-1.607-0.954-2.543-0.954H82.853
+	c-2.759,0-4.647-2.787-3.622-5.349l17.755-44.39c0.419-1.045,0.356-2.216-0.156-3.218c-12.744-24.96-19.474-52.98-19.474-81.164
+	c0-98.968,80.896-179.398,180.037-178.638c97.168,0.745,176.5,80.077,177.244,177.244C435.398,353.747,354.968,434.643,256,434.643z
+	" />
+				<path style="fill:#7ED63F;" d="M256,401.252c-35.349,0-69.415-12.853-95.922-36.192l-6.714-5.91
+	c-1.771-1.559-4.049-2.419-6.408-2.419h-16.066c-2.146,0-3.613-2.167-2.816-4.159l4.624-11.558c1.052-2.63,0.902-5.589-0.413-8.099
+	l-5.058-9.662c-10.781-20.598-16.48-43.853-16.48-67.253c0-80.092,65.159-145.251,145.25-145.252
+	c80.099-0.001,145.254,65.155,145.254,145.254C401.251,336.094,336.092,401.252,256,401.252z" />
+				<path id='phone' style="fill:#FFFFFF; transform-origin: 50% 50%; " d="M301.441,358.345c-5.258,0-10.3-1.629-14.584-4.712c-49.582-35.676-92.812-78.907-128.491-128.492
+	c-7.202-10.01-6.059-23.643,2.715-32.418l35.886-35.885c7.141-7.141,18.719-7.141,25.859,0l22.15,22.15
+	c7.141,7.141,7.141,18.719,0,25.859l-6.093,6.093c-2.98,2.98-3.869,7.459-2.285,11.364c10.18,25.101,27.997,42.918,53.098,53.098
+	c3.906,1.584,8.383,0.695,11.364-2.285l6.093-6.093c7.141-7.141,18.719-7.141,25.86,0l22.15,22.15c7.141,7.141,7.141,18.719,0,25.86
+	l-35.885,35.885C314.488,355.708,308.154,358.345,301.441,358.345z" />
 			</svg>
 		</div>
 	</div>
@@ -135,7 +139,7 @@
 	<div class="nes-container with-title examples-containers">
 		<span class="title">Exemplo 1.4</span>
 		<div id="container-svg-3">
-			<svg width="40" height="29" viewBox="0 0 40 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg width="100" height="70" viewBox="0 0 40 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g id="AnimationButtonPoligon">
 					<rect width="40" height="29" fill="white" />
 					<g id="btnOpen">
@@ -160,7 +164,7 @@
 				// const { animate, utils, svg } = anime;
 
 				//Animação 1.1
-				const { animate} = anime;	//disponível após a instalação via cdn ou npm
+				const { animate } = anime;	//disponível após a instalação via cdn ou npm
 				animate('#circle', { 		//alvo da animação, pode ser mais de um
 					translateX: 250,			//propriedade a ser modificada (camelCase)
 					// borderRadius:50,			//propriedade css em camelCase
@@ -173,36 +177,37 @@
 				});
 
 
-
-
-
 				//Animação 2.1
 				const { utils } = anime;
-				const $svgTarget = utils.$('#sgv-geometry path');
+				const $ = utils.$;
+				const $svgTarget = $('#phone');
 
 				const anime2 = animate(
 					$svgTarget, //alvo da animação (elemento svg)
 					{
-						fill: [							//propriedade a ser modificada (fill)
-							{ to: '#00ff00', duration: 2000 },
-							{ to: '#0000ff', duration: 2000 },
-							{ to: '#ff0000', duration: 2000 },
+						// translateX:200,
+						// translateY:-100,
+						rotate: [
+							{ to: '.1turn', duration: 100 },
+							{ to: '.08turn', duration: 50 },
+							{ to: '.2turn', duration: 50 },
+							{ to: '.08turn', duration: 50 },
+							{ to: '.2turn', duration: 50 },
+							{ to: '.08turn', duration: 50 },
+							{ to: '0turn', duration: 50 },
 						],
-
-						
-						// duration:1000, 			//duração em ms
-						loop: true, 			//animação em loop (animation-count:infinite)
-						autoplay: false,
-						easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
+						alternate: true,
+						duration: 300, 			//duração geral em ms, necessário para o alternate
+						loop: false, 			//animação em loop (animation-count:infinite)
+						// loopDelay: 200,			//delay entre repetições do loop
+						autoplay: false,		//Inicialiar a animação parada
+						easing: 'inBounce',	//função de tempo  (animation-timing-function)
+						onComplete: ()=>anime2.reset() 
 					});
 
-				$svgTarget[0].onclick = () => {
-					anime2.play();
-				}
-
-
-
-
+				const $svgContainer = $('#svg-container svg')[0]
+				$svgContainer.onclick = () =>anime2.play();
+				// $svgContainer.onmouseleave = () => anime2.pause();
 
 
 				//Animação 1.3
@@ -230,38 +235,54 @@
 					});
 
 
+				const { svg } = anime;
+
 				const anime4 = animate($jsPath,  //alvo da animação (elemento svg
 					{
-						keyframes: [
-							{ d: svg.morphTo($jsPath), duration: 1000 },
-							{ d: svg.morphTo($ecmaPath), duration: 1500 },
-						],
-						loop: true, 			//animação em loop (animation-count:infinite)
-						direction: 'alternate',
+						translateX: '100px',
+						loop: false,
 						autoplay: false,
-						alternate: true,
 						// easing: 'easeInOutExpo'	//função de tempo  (animation-timing-function)
 						// easing: 'linear'	//função de tempo  (animation-timing-function)
-						easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
+						easing: 'easeInQuad',	//função de tempo  (animation-timing-function)
+						onBegin: () => {
+							animate($ecmaPath,  //alvo da animação (elemento svg
+								{
+									opacity: 1,
+									loop: false,
+									autoplay: true,
+									// easing: 'easeInOutExpo'	//função de tempo  (animation-timing-function)
+									// easing: 'linear'	//função de tempo  (animation-timing-function)
+									easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
+								})
+						}
 					});
 
 
 
-				document.querySelector('#svg_js_logo')
-					.addEventListener('mouseenter', () => {
-						// anime3.duration = 1000;
-						//anime3.autoplay = true;
-						anime3.play();
-						anime4.play();
-					})
+				$('#svg_js_logo')[0].onmouseenter = () => {
+					anime3.play();
+					anime4.play();
+				};
 
 				$('#svg_js_logo')[0].onmouseleave = () => anime3.pause();
 
 				anime3.onPause = () => {
 					const [path] = anime3.targets;
-
 					path.setAttribute('fill', '#F7DF1E');
-					anime4.pause();
+					(animate($ecmaPath, {
+						opacity: 0,
+						autoplay: false,
+						onBegin:()=>{
+							(animate($jsPath,{
+								translateX: ['-100px','0px'],
+								loop: false,
+								autoplay: false,
+								onComplete: ()=>anime4.reset(),
+							})).play()
+						}
+					})
+					).play();					
 				}
 
 
@@ -276,7 +297,7 @@
 
 				const anime6 = animate($("#btnClose"),
 					{
-						opacity: 1,
+						opacity: .85,
 						duration: 500,
 						autoplay: false,
 						easing: 'linear'

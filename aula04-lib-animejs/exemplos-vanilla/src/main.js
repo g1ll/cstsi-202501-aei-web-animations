@@ -4,11 +4,10 @@ import {startAnimations} from './animations.js'
 
 const links = [
   { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
-]
+  { path: 'exemplo-02-seletor-utils', title: 'Seletores com Objeto Utils' },
+  { path: 'exemplo-03-svg-icon', title: 'Animando um Icone SVG' },
+  { path: 'exemplo-04-morph-svg', title: 'Função Morph SVG' },
+  ]
 
 const DOMlist = document.querySelector('ul')
 links.forEach((item,index) =>{ 
