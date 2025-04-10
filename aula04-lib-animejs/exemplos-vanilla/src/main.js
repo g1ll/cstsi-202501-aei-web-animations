@@ -4,17 +4,18 @@ import {startAnimations} from './animations.js'
 
 const links = [
   { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
-  { path: 'exemplo-02-seletor-utils', title: 'Seletores com Objeto Utils' },
-  { path: 'exemplo-03-svg-icon', title: 'Animando um Icone SVG' },
-  { path: 'exemplo-04-morph-svg', title: 'Função Morph SVG' },
+  { path: 'exemplo-02-seletor-utils', title: 'Seletores com o Objeto Utils' },
+  { path: 'exemplo-03-slider-imagem', title: 'Slider Imagem' },
+  { path: 'exemplo-x-svg-icon', title: 'Animando um Icone SVG' },
+  { path: 'exemplo-y-morph-svg', title: 'Função Morph SVG' },
   ]
 
 const DOMlist = document.querySelector('ul')
 links.forEach((item,index) =>{ 
-  let menuItem =  `Exemplo 0${index+1}-${item.title}`
+  let menuItem =  `Exemplo 0${index+1} - ${(item.title)}`;
   let contentArray = menuItem.split('');
   let content = contentArray.map((letter) => {
-    return `<span>${letter}</span>`
+    return `<span>${letter===' '?'&nbsp;':letter}</span>`
   }).join('')
   DOMlist.innerHTML += `
   <li>

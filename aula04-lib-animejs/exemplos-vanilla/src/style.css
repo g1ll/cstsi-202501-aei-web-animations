@@ -55,20 +55,18 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: center;
   opacity: 1;
 
   ul{
-    max-width: 50%;
-    margin: auto;
+    max-width: min(75%,600px);
+    margin: 2rem 0;
+    padding: 0;
   }
 
 
   h3{
     display: grid;
     grid-template-columns: repeat(100, 1fr);
-    align-self: center;
-    justify-self: center;
     margin: 0;
     margin-bottom: .5rem;
     font-size: 2rem;
