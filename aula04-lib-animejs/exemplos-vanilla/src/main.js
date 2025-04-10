@@ -3,11 +3,11 @@ import {startAnimations} from './animations.js'
 
 
 const links = [
-  { path: 'exemplo-01-intro-animejs', title: 'Introduação a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introduação a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introduação a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introduação a Biblioteca' },
-  { path: 'exemplo-01-intro-animejs', title: 'Introduação a Biblioteca' },
+  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
+  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
+  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
+  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
+  { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
 ]
 
 const DOMlist = document.querySelector('ul')
