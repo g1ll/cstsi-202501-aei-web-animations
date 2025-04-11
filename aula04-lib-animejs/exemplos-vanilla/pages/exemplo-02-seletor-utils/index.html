@@ -59,34 +59,34 @@
 		<a href="/">
 			<button type="button" title='Voltar ao início!' class="nes-btn is-error btn">Voltar</button>
 		</a>
-		<div>
-			<script type="module">
-				import { animate, utils } from 'https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm';
-			
-				//Animação 2.1
-				const $svgTarget = utils.$('#sgv-geometry path');
+	</div>
+	<script type="module">
+		import { animate, utils } from 'https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm';
 
-				const anime2 = animate(
-					$svgTarget, //alvo da animação (elemento svg)
-					{
-						fill: [//propriedade a ser modificada (fill)
-							{ to: '#00ff00', duration: 1000 },
-							{ to: '#0000ff', duration: 1000 },
-							{ to: '#ff0000', duration: 1000 },
-						],
-						scale: [
-							{ to: 1, duration: 1000 },
-							{ to: .5, duration: 1000 },
-							{ to: .75, duration: 1000 }
-						],
-						alternate: true,
-						loop: true, 			//animação em loop (animation-count:infinite)
-						autoplay: false,
-						easing: 'easeInQuad'	//função de tempo  (animation-timing-function)
-					});
+		//Animação 2.1
+		const $svgTarget = utils.$('#sgv-geometry path');
 
-				$svgTarget[0].onclick = () => anime2.play();
-			</script>
+		const anime2 = animate(
+			$svgTarget, //alvo da animação (elemento svg)
+			{
+				fill: [//propriedade a ser modificada (fill)
+					{ to: '#00ff00', duration: 1000 }, //keyframe 01
+					{ to: '#0000ff', duration: 1000 }, //keyframe 02
+					{ to: '#ff0000', duration: 1000 }, //keyframe 03
+				],
+				scale: [ //keyframes de escala
+					{ to: 1, duration: 1000 }, //keyframe 01
+					{ to: .5, duration: 1000 }, //keyframe 02
+					{ to: .75, duration: 1000 } //keyframe 03
+				],
+				alternate: true,
+				loop: true, 			//animação em loop (animation-count:infinite)
+				autoplay: false,
+				ease: 'inQuad'	//função de tempo  (animation-timing-function)
+			});
+
+		$svgTarget[0].onclick = () => anime2.play();
+	</script>
 </body>
 
 </html>
