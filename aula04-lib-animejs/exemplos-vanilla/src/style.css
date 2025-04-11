@@ -5,12 +5,21 @@
   --bg-primary:#92cc41
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  place-items: center;
+}
+
 h1{
   color: var(--text-primary);
-  font-size: 3cap;
+  font-size: 2em;
+  text-align: center;
   a{
     color:var(--text-secodary);
-    font-size: min(32px,5vw);
+    font-size: 1em;
   }
 
   a:hover{
@@ -28,7 +37,6 @@ li{
   transition: 2s;
 
   a {
-    font-size: 4.5vw;
     text-decoration: none;
     color:var(--text-primary);
   }
@@ -51,6 +59,7 @@ a{
 }
 
 .container {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,9 +67,7 @@ a{
   opacity: 1;
 
   ul{
-    max-width: min(75%,600px);
     margin: 2rem 0;
-    padding: 0;
   }
 
 
@@ -69,7 +76,7 @@ a{
     grid-template-columns: repeat(100, 1fr);
     margin: 0;
     margin-bottom: .5rem;
-    font-size: 2rem;
+    font-size: 1.25em;
     transition: 5s;
   }
 
@@ -136,7 +143,10 @@ a{
 }
 
 @media (min-width: 1024px) {
-  .container div{
+  .container{
     width: 25%;
+    h3{
+      font-size: 35px;
+    }
   }
 }

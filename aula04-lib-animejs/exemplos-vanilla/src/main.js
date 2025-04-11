@@ -6,6 +6,7 @@ const links = [
   { path: 'exemplo-01-intro-animejs', title: 'Introdução a Biblioteca' },
   { path: 'exemplo-02-seletor-utils', title: 'Seletores com o Objeto Utils' },
   { path: 'exemplo-03-slider-imagem', title: 'Slider Imagem' },
+  { path: 'exemplo-04-motion-path', title: 'SVG Motion Path' },
   { path: 'exemplo-x-svg-icon', title: 'Animando um Icone SVG' },
   { path: 'exemplo-y-morph-svg', title: 'Função Morph SVG' },
   ]
