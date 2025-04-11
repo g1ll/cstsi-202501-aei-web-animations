@@ -137,9 +137,6 @@ a{
   li a{
     font-size: max(20px,2.5vw);
   }
-  .container div{
-    width: 50%;
-  }
 }
 
 @media (min-width: 1024px) {
