@@ -4,24 +4,23 @@ const $pathKart = svg.createMotionPath('.circuit svg path');
 const $marioKart =  $('#marioDiv')
 const $luigiKart =  $('#luigiDiv')
 
+const runLuigi = animate($luigiKart,{
+  ...$pathKart,
+  ease: 'outQuad',
+  duration: 3500,
+  delay:1000,
+  autoplay: false,
+});
+
 const runMario  = animate(
   $marioKart,
   {
   ...$pathKart,
-  ease: 'linear',
+  ease: 'in',
   duration: 3500,
-  loop: false,
-  //loopDelay: 500,
   autoplay: false,
-});
-
-const runLuigi = animate($luigiKart,{
-  ...$pathKart,
-  ease: 'inQuad',
-  duration: 3500,
-  loop: false,
-  autoplay: false,
+  onBegin: ()=>runLuigi.play(),
 });
 
 $marioKart[0].onclick = ()=>runMario.play();
-$luigiKart[0].onclick = ()=>runLuigi.play();
+// $luigiKart[0].onclick = ()=>runLuigi.play();
