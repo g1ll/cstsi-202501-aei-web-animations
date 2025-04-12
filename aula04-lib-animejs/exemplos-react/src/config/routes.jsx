@@ -5,16 +5,10 @@ import {
 } from "react-router-dom";
 import App from "../App";
 
-import Exemplo01Animation from "../pages/Exemplo01Simples/Exemplo01Simples";
-import Exemplo02AnimeNames from "../pages/Exemplo02AnimeNames/Exemplo02AnimeNames";
-import Exemplo03Properties from "../pages/Exemplo03Properties/Exemplo03Properties";
-import Exemplo04UtilityClass from "../pages/Exemplo04UtilityClass/Exemplo04UtilityClass";
+import Exemplo01Animation from "../pages/Exemplo01Intro/Exemplo01Intro";
 
 export const pages = [
-    {path:"exemplo-01-simples", title:"Aplicando Animações com Classe", el: <Exemplo01Animation/>},
-    {path:"exemplo-02-keyframes", title: "Nomes de Animações Prontas", el:<Exemplo02AnimeNames/>},
-    {path:"exemplo-03-custom-properties", title: "Variáveis CSS", el:<Exemplo03Properties/>},
-    {path:"exemplo-04-utility-class", title: "Classes Utilitárias", el:<Exemplo04UtilityClass/>},
+    {path:"exemplo-01-simples",  title: 'Introdução a Biblioteca', el: <Exemplo01Animation/>},
 ]
 
 const routes = createBrowserRouter(

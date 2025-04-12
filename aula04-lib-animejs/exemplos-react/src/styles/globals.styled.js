@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import 'animate.css'; //importando a biblioteca animate.css como módulo.
 
 export const GlobalStyle = createGlobalStyle`
 :root{
@@ -93,13 +92,18 @@ a{
   transition: filter 300ms;
 }
 
+.vite-logo{
+  opacity:0;
+  transform-origin: center center;
+}
+
 .vite-logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .react-spin:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+/* 
 .react-spin{
   animation-name: rotateOut;
   animation-iteration-count: infinite;
@@ -113,7 +117,7 @@ a{
   .react-spin{
     animation-name: rotateIn;
   }
-}
+} */
 
 
 @media (max-width: 450px) {
