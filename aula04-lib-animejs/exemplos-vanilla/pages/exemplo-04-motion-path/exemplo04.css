@@ -33,34 +33,23 @@ body {
     /* overflow: hidden; */
     --posicao-x: 100px;
     --posicao-y: 100px;
+
 }
 
-
-#mario {
-    transform: translate(-40px, 60px);
-    z-index: 10;
-}
-
-#luigi {
-    transform: translate(0px, 60px);
-    z-index: 9;
-}
-
-#luigiDiv{
+#luigiDiv, #marioDiv {
     position: absolute;
-    background-image: url('/assets/img/mario-kart/luigi.png');
-    background-repeat: no-repeat;
-    width:30px;
+    width: 30px;
     height: 30px;
+    background-repeat: no-repeat;
+}
+
+#luigiDiv {
+    background-image: url('/assets/img/mario-kart/luigi.png');
     z-index: 11;
 }
 
-#marioDiv{
-    position: absolute;
+#marioDiv {
     background-image: url('/assets/img/mario-kart/mario.png');
-    background-repeat: no-repeat;
-    width:30px;
-    height: 30px;
     z-index: 12;
 }
 
@@ -84,5 +73,55 @@ svg #drone {
     100% {
         offset-distance: 100%;
         motion-offset: 10%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .nes-container,.examples-containers {
+        padding: 5px;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuit {
+        overflow: hidden;
+
+        #luigiDiv,#marioDiv  {
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            /* background-color: red; */
+
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .nes-container,.examples-containers {
+        width: max(75%,280px);
+        padding: 0px;
+        .container{
+            width: 256px;
+        }
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuit {
+        overflow: hidden;
+        #luigiDiv,#marioDiv  {
+            width: 15px;
+            height: 15px;
+            background-size: contain;
+            /* background-color: red; */
+
+        }
     }
 }
