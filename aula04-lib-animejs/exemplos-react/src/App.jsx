@@ -9,7 +9,7 @@ function App() {
   const [showAnimateCSSLogo, setShowAnimateCSSLogo] = useState(false)
   const animateCSSLogoRef = useRef(null);
 
-  const applyAnimation = () => {
+  const applyAnimations = () => {
     console.log(animateCSSLogoRef.current)
     animateCSSLogoRef.current && animate(animateCSSLogoRef.current, {
       opacity: [0, 1],
@@ -25,7 +25,15 @@ function App() {
       alternate: true,
       rotate: '-1turn',
       loop: true,
-      duration:5000
+      duration:5000,
+      onBegin: self =>{
+        console.log('onBegin',self)
+        animate('.react-spin',{
+          scale:[0,1],
+          loop:false,
+          duration: self.iterationDuration,
+        });
+      }
     });
 
     animate('.vite-logo', {
@@ -41,7 +49,7 @@ function App() {
 
   useEffect(() => {
     !showAnimateCSSLogo && setShowAnimateCSSLogo(true)
-    applyAnimation()
+    applyAnimations()
   }, [showAnimateCSSLogo]);
 
   return (
