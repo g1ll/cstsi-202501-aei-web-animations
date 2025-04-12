@@ -19,7 +19,7 @@ const anime2 = animate(
         ],
         alternate: true,
         duration: 300, 			//duração geral em ms, necessário para o alternate
-        loop: false, 			//animação em loop (animation-count:infinite)
+        //loop: false, 			//animação em loop (animation-count:infinite)
         // loopDelay: 200,			//delay entre repetições do loop
         autoplay: false,		//Inicialiar a animação parada
         easing: 'inBounce',	//função de tempo  (animation-timing-function)
@@ -32,6 +32,8 @@ $svgContainer.onclick = () => anime2.play();
 
 
 //Animação 5.2
+
+console.log($('#svg_js_logo path')) 
 const [$squarePath, $jsPath, $ecmaPath, $sPath] = $('#svg_js_logo path');
 
 const anime3 = animate($squarePath,  //alvo da animação (elemento svg
@@ -123,10 +125,12 @@ $("#container-svg-3 svg")[0].onclick = () => {
     if (anime5.targets[0].style.opacity == 1) {
         anime5.play();
         anime5.onBegin = () => anime6.play()
-        anime6.progress = 0;
+        // anime6.progress = 0;
+        anime6.reset();
     } else {
         anime6.reverse();
         anime6.onBegin = () => anime5.targets[0].style.opacity = 1
-        anime5.progress = 0;
+        // anime5.progress = 0;
+        anime5.reset();
     }
 }
