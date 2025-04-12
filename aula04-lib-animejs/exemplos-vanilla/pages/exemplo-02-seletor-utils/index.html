@@ -65,6 +65,7 @@
 
 		//Animação 2.1
 		const $svgTarget = utils.$('#sgv-geometry path');
+		//console.log($svgTarget);
 
 		const anime2 = animate(
 			$svgTarget, //alvo da animação (elemento svg)
@@ -81,7 +82,7 @@
 				],
 				alternate: true,
 				loop: true, 			//animação em loop (animation-count:infinite)
-				autoplay: false,
+				autoplay: false,	//animate-play-state: paused
 				ease: 'inQuad'	//função de tempo  (animation-timing-function)
 			});
 
