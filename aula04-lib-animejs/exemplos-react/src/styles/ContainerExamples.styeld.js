@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ContainerExamples = styled.div`
-	flex:column;
+	flex:row;
 	justify-content: center;
-	/* margin-top: 5%; */
-	width: 50%;
+	margin-top: 5%;
+	width: 75%;
 	align-items: center;
 	text-align: center;
 
@@ -23,6 +23,13 @@ export const ContainerExamples = styled.div`
 	.nes-btn {
 		border-image-repeat: stretch !important;
 	}
+
+	.nes-container {
+		display: flex;
+      flex-direction: column;
+      align-items: center;
+	}
+
 
 	button {
 		margin: auto;
