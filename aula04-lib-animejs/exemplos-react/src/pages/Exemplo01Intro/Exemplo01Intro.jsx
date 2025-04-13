@@ -19,7 +19,6 @@ const Exemplo01Intro = () => {
 
   return (
     <>
-      <HeaderLinks />
       <title>CSTSI-AEI Aula 04: Introdução a Biblioteca AnimeJS</title>
       <style>{`
         main {

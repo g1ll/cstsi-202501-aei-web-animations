@@ -48,7 +48,6 @@ const Exemplo02SeletorUtils = () => {
 
     return (
         <>
-            <HeaderLinks />
             <title>CSTSI-AEI Aula 04: Seleção de Elementos com o Utils da AnimeJS</title>
             <style>{`
             		body {

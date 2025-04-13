@@ -29,7 +29,7 @@ margin: 5px 0;
     grid-template-columns: repeat(100, 1fr);
     margin: 0;
     margin-bottom: .5rem;
-    font-size: 1.25em;
+    font-size: .85em;
     transition: 5s;
   }
 
@@ -37,6 +37,27 @@ margin: 5px 0;
     background-color:var(--bg-primary);
     border-radius: 5px;
     transition: 1s;
+  }
+
+  @media (max-width: 450px) {
+  .logo {
+    width: 25%;
+  }
+  .logoAnimeJs {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  li a{
+    font-size: max(20px,2.5vw);
+  }
+}
+
+@media (min-width: 1024px) {
+    h3{
+      font-size: 35px;
+    }
   }
 
 `;

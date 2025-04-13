@@ -120,22 +120,6 @@ export const Container = styled.div`
     ul{
       margin: 2rem 0;
     }
-
-
-    h3{
-      display: grid;
-      grid-template-columns: repeat(100, 1fr);
-      margin: 0;
-      margin-bottom: .5rem;
-      font-size: 1.25em;
-      transition: 5s;
-    }
-
-    h3:hover{
-      background-color:var(--bg-primary);
-      border-radius: 5px;
-      transition: 1s;
-    }
     
     div{
       width: 75%;
@@ -149,4 +133,8 @@ export const Container = styled.div`
       text-decoration: none;
       width:auto;
     }
+
+    @media (min-width: 1024px) {
+    width: 25%;
+  }
 `;
