@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const MenuItemStyled = styled.li`
-margin: 5px 0;
+
+  margin: 5px 0;
   list-style: none;
   list-style-position: inside;
   font-weight: 700;
@@ -25,11 +26,13 @@ margin: 5px 0;
   
 
   h3{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(100, 1fr);
     margin: 0;
+    place-items: center;
     margin-bottom: .5rem;
-    font-size: .85em;
+    font-size: .5em;
     transition: 5s;
   }
 
@@ -39,7 +42,10 @@ margin: 5px 0;
     transition: 1s;
   }
 
-  @media (max-width: 450px) {
+  @media (min-width: 450px) {
+    h3{
+    font-size: max(10px,1.5vw);
+  }
   .logo {
     width: 25%;
   }
@@ -49,14 +55,26 @@ margin: 5px 0;
 }
 
 @media (min-width: 600px) {
-  li a{
-    font-size: max(20px,2.5vw);
+  h3{
+    font-size: max(12px,1.5vw);
+  }
+}
+
+@media (min-width: 960px) {
+  h3{
+    font-size: max(15px,2vw);
   }
 }
 
 @media (min-width: 1024px) {
     h3{
-      font-size: 35px;
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    h3{
+      font-size: 25px;
     }
   }
 

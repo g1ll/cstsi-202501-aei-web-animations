@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import HeaderLinks from '../../components/HeaderLinks/HeaderLinks';
 import { animate } from 'animejs';
+import { ContainerExamples } from '../../styles/ContainerExamples.styeld';
 
 const Exemplo01Intro = () => {
 
@@ -21,39 +21,18 @@ const Exemplo01Intro = () => {
     <>
       <title>CSTSI-AEI Aula 04: Introdução a Biblioteca AnimeJS</title>
       <style>{`
-        main {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .examples-containers {
-          margin-top: 5%;
-          width: 50%;
-        }
-
-        .btn {
-          margin: 15px;
-          width: 200px;
-        }
-
         #circle {
           width: 40px;
           height: 40px;
           background-color: blue;
           border-radius: 50%;
         }
-
-        .nes-btn {
-          border-image-repeat: stretch !important;
-        }
 	`}</style>
-      <main>
-        <h2 className="nes-text is-primary">
-          Exemplos de Introdução a Biblioteca
-          <a href="https://animejs.com/documentation/" target="_blank">AnimeJS</a>
-        </h2>
-
+      <h2 className="nes-text is-primary">
+        Exemplos de Introdução a Biblioteca
+        <a href="https://animejs.com/documentation/" target="_blank"> AnimeJS</a>
+      </h2>
+      <ContainerExamples>
         <div className="nes-container with-title examples-containers">
           <span className="title">
             Exemplo 1.1
@@ -65,7 +44,7 @@ const Exemplo01Intro = () => {
             <button type="button" title='Voltar ao início!' className="nes-btn is-error btn">Voltar</button>
           </a>
         </div>
-      </main>
+      </ContainerExamples>
     </>
   )
 }
