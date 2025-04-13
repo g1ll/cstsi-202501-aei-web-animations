@@ -5,6 +5,7 @@ import animatecssLogoSrc from '/assets/img/animejs_logo.png?url'
 import { AnimateCSSLogo, LogosContainer } from './styles/App.styled'
 import { animate } from 'animejs'
 import MenuItem from './components/MenuItem/MenuItem'
+import { Container } from './styles/globals.styled'
 
 function App() {
   const [showAnimateCSSLogo, setShowAnimateCSSLogo] = useState(false)
@@ -55,7 +56,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <Container>
         <h1>CSTSI - AEI
           <a target="_blank" href="#">&nbsp;Aula 04</a>
         </h1>
@@ -78,7 +79,7 @@ function App() {
             </Link>
             : ''}
         </LogosContainer>
-      </div>
+      </Container>
     </>
   )
 }

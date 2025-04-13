@@ -27,7 +27,6 @@ function listLettersAnimation($target,count=10){
     }, 100*count);
 }
 
-
 function lettersAnimation($target){
     animate($target,{
         // Property keyframes
@@ -50,7 +49,6 @@ function lettersAnimation($target){
         ease: 'inOutCirc',
     });
 }
-
 
 const MenuItem = ({ path, title, index }) => {
 
