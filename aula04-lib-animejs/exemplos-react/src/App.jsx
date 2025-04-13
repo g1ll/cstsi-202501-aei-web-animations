@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import animatecssLogoSrc from '/assets/img/animejs_logo.png?url'
 import { AnimateCSSLogo, LogosContainer } from './styles/App.styled'
 import { animate } from 'animejs'
+import MenuItem from './components/MenuItem/MenuItem'
 
 function App() {
   const [showAnimateCSSLogo, setShowAnimateCSSLogo] = useState(false)
@@ -60,11 +61,12 @@ function App() {
         </h1>
         <ul>
           {pages.map(({ path, title }, index) => (
-            <li key={index}>
-              <Link to={path}>
-                {` Exemplo 0${index + 1} ${title}`}
-              </Link>
-            </li>
+            <MenuItem
+              key={path}
+              path={path}
+              title={title}
+              index={index}
+            />
           ))}
         </ul>
         <LogosContainer>
