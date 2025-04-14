@@ -1,13 +1,14 @@
 import { animate, utils, svg } from 'https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm';
 const $ = utils.$;
-const $pathKart = svg.createMotionPath('.circuit svg path');
+const $pathKartMario = svg.createMotionPath('.circuit svg #pathMario');
+const $pathKartLuigi = svg.createMotionPath('.circuit svg #pathLuigi');
 const $marioKart = $('#marioDiv')
 const $luigiKart = $('#luigiDiv')
 
 const runLuigi = {
   anime:
     animate($luigiKart, {
-      ...$pathKart,
+      ...$pathKartLuigi,
       ease: 'outQuad',
       duration: 3500,
       delay: 1000,
@@ -20,7 +21,7 @@ const runMario = {
   anime: animate(
     $marioKart,
     {
-      ...$pathKart,
+      ...$pathKartMario,
       ease: 'in',
       duration: 3500,
       autoplay: false,
