@@ -8,6 +8,7 @@ export const ContainerExamples = styled.div`
 	align-items: center;
 	text-align: center;
 
+
 	.btn {
 		margin: 15px;
 		width: 200px;
@@ -25,7 +26,7 @@ export const ContainerExamples = styled.div`
 	}
 
 	.nes-container {
-		display: flex;
+	  display: flex;
       flex-direction: column;
       align-items: center;
 	}
@@ -33,5 +34,13 @@ export const ContainerExamples = styled.div`
 
 	button {
 		margin: auto;
+	}
+
+	@media (max-width: 450px) {
+		.nes-container {
+      		align-items: flex-start;
+			padding: 0;
+		}
+
 	}
 `;

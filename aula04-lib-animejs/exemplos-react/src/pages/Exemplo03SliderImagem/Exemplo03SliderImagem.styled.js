@@ -30,8 +30,16 @@ export const SliderElement = styled.div`
       height: 100%;
      
      img {
-      width: 100%;
+      width: 600px;
+      height: 300px;
     }
+
+    /* @media (min-width: 600px) {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    } */
 
     
 `;

@@ -11,11 +11,10 @@ const Exemplo03SliderImagem = () => {
 
     const slideAnimationOptions = useRef({
         opacity: [0,1],
-        display: ['none', 'block'],
-        filter:['blur(100px)', 'blur(0px)'],
-        width:['85%','100%'],
+        scale:['0.5', '1'],
+        filter:['blur(50px)', 'blur(0px)'],
         delay: 100,
-        duration: 2000,
+        duration: 1000,
         autoplay: true,
         //ease: 'linear',
         ease: "outElastic(1,.3)",
