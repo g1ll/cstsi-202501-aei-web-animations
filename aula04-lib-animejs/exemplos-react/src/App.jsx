@@ -64,7 +64,7 @@ function App() {
         <ul>
           {pages.map(({ path, title }, index) => (
             <MenuItem
-              key={path}
+              key={index}
               path={path}
               title={title}
               index={index}

@@ -65,8 +65,8 @@ const MenuItem = ({ path, title, index }) => {
     return (
         <MenuItemStyled>
             <Link to={path}>
-                <h3>{contentArray.map(letter =>
-                        <span>{letter === ' ' ? '\u00A0' : letter}</span>
+                <h3>{contentArray.map((letter,i) =>
+                        <span key={index+letter+i}>{letter === ' ' ? '\u00A0' : letter}</span>
                     )}
                 </h3>
             </Link>
