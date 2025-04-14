@@ -169,7 +169,7 @@
     const $btnPrev = $('.slider-prev')[0]
     const $btnNext = $('.slider-next')[0]
 
-    const animateConfigOptions = {
+    const slideAnimationOptions = {
       opacity: [0,1],
       display: ['none', 'block'],
       filter:['blur(100px)', 'blur(0px)'],
@@ -184,7 +184,9 @@
 
     const showItem = (element) => {
       element.classList.add('item-active')
-      animate($(`li:nth-child(${activeItemIndex+1}) img`),animateConfigOptions)
+      animate(
+        $(`li:nth-child(${activeItemIndex+1}) img`),
+        slideAnimationOptions)
       deactivateItens()
     }
 

@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ContainerExamples } from '../../styles/ContainerExamples.styeld'
 import { Slider, SliderContainer, SliderElement, SliderItem, SliderList } from './Exemplo03SliderImagem.styled'
+import { animate, utils } from 'animejs'
 
 const Exemplo03SliderImagem = () => {
 
     const [activeItemIndex, setActiveItemIndex] = useState(0)
+    
     const totalSlides = 6;
+
+    const slideAnimationOptions = useRef({
+        opacity: [0,1],
+        display: ['none', 'block'],
+        filter:['blur(100px)', 'blur(0px)'],
+        width:['85%','100%'],
+        delay: 100,
+        duration: 2000,
+        autoplay: true,
+        //ease: 'linear',
+        ease: "outElastic(1,.3)",
+      })
 
     const nextSlide = () => {
         if (activeItemIndex < totalSlides-1) 
@@ -17,10 +31,18 @@ const Exemplo03SliderImagem = () => {
          setActiveItemIndex(activeItemIndex-1)
     }
 
+    useEffect(() => {
+        animate(
+            utils.$(`li:nth-child(${activeItemIndex+1}) img`),
+            slideAnimationOptions.current
+        )
+
+    },[activeItemIndex, slideAnimationOptions])
+
     return (
         <>
             <title>CSTSI-LPAW Aula 04: Biblioteca AnimeJS</title>
-            <h2 class="nes-text is-primary">
+            <h2 className="nes-text is-primary">
                 Slider de Imagens com
                 <a href="https://animejs.com/documentation/" target="_blank"> AnimeJS</a>
             </h2>
@@ -48,7 +70,7 @@ const Exemplo03SliderImagem = () => {
                                 }
                             </SliderList>
                         </Slider>
-                            <div class="slider-next">
+                            <div className="slider-next">
                                 <button 
                                     type="button" 
                                     className="nes-btn  is-primary"
@@ -56,12 +78,12 @@ const Exemplo03SliderImagem = () => {
                                     style={{visibility: activeItemIndex<totalSlides-1 ?'visible':'hidden'}}
                                     > &rArr;
                                 </button>
-                            </div> 
+                            </div>
                     </SliderContainer>
                 </div>
                 <div>
                     <a href="/">
-                            <button type="button" title="Voltar ao início!" class="nes-btn is-error btn">Voltar</button>
+                            <button type="button" title="Voltar ao início!" className="nes-btn is-error btn">Voltar</button>
                     </a>
                 </div>
             </ContainerExamples>
