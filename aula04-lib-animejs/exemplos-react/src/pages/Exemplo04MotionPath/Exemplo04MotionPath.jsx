@@ -8,7 +8,7 @@ import { animate, createScope, svg } from 'animejs'
 
 const Exemplo04MotionPath = () => {
 
-    
+
     const rootScope = useRef(null)
     const scope = useRef(null)
 
@@ -16,7 +16,7 @@ const Exemplo04MotionPath = () => {
     const luigiPlayer = useRef(null)
 
     useEffect(() => {
-        scope.current = createScope({rootScope}).add(self=>{
+        scope.current = createScope({ rootScope }).add(self => {
             const $pathKartMario = svg.createMotionPath('.circuit svg #pathMario');
             const $pathKartLuigi = svg.createMotionPath('.circuit svg #pathLuigi');
 
@@ -43,35 +43,35 @@ const Exemplo04MotionPath = () => {
                     })
             }
 
-            const resizeScreen =  () => {
+            const resizeScreen = () => {
                 console.log('resize');
                 const resizedPath = svg.createMotionPath('.circuit svg path');
                 runMario.anime = animate(
                     marioPlayer.current,
-                  {
-                    ...resizedPath,
-                    ease: 'in',
-                    duration: 3500,
-                    autoplay: false,
-                    onBegin: () => runLuigi.anime.play(),
-                  })
-              
+                    {
+                        ...resizedPath,
+                        ease: 'in',
+                        duration: 3500,
+                        autoplay: false,
+                        onBegin: () => runLuigi.anime.play(),
+                    })
+
                 runLuigi.anime = animate(luigiPlayer.current, {
-                  ...resizedPath,
-                  ease: 'outQuad',
-                  duration: 3500,
-                  delay: 1000,
-                  // zIndex: [11, 15],
-                  autoplay: false,
+                    ...resizedPath,
+                    ease: 'outQuad',
+                    duration: 3500,
+                    delay: 1000,
+                    // zIndex: [11, 15],
+                    autoplay: false,
                 })
-              }
-            
-            self.add('marioStart', ()=>runMario.anime.play())
+            }
+
+            self.add('marioStart', () => runMario.anime.play())
             self.add('resizeScreen', resizeScreen)
             window.addEventListener('resize', self.methods.resizeScreen)
         })
 
-        return ()=>{
+        return () => {
             window.removeEventListener('resize', scope.current.methods.resizeScreen)
             scope.current.revert()
         }
@@ -100,18 +100,18 @@ const Exemplo04MotionPath = () => {
                     <SVGKartContainer>
                         <div className="container" ref={rootScope}>
                             <div className="circuit">
-                                <MarioPlayer ref={marioPlayer} onClick={handleClick}/>
-                                <LuigiPlayer  ref={luigiPlayer}/>
+                                <MarioPlayer ref={marioPlayer} onClick={handleClick} />
+                                <LuigiPlayer ref={luigiPlayer} />
                                 <CircuitPath />
                             </div>
                         </div>
                     </SVGKartContainer>
-                    <div>
-                        <a href="/">
-                            <button type="button" title="Voltar ao início!" className="nes-btn is-error btn">Voltar</button>
-                        </a>
-                    </div>
                 </ContainerExamplesSVG>
+                <div>
+                    <a href="/">
+                        <button type="button" title="Voltar ao início!" className="nes-btn is-error btn">Voltar</button>
+                    </a>
+                </div>
             </ContainerExamples>
         </>
     )
