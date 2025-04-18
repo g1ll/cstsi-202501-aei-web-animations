@@ -6,7 +6,6 @@ import { AnimateCSSLogo, LogosContainer } from './styles/App.styled'
 import { animate } from 'animejs'
 import MenuItem from './components/MenuItem/MenuItem'
 import { Container } from './styles/globals.styled'
-import HeaderLinks from './components/HeaderLinks/HeaderLinks'
 
 function App() {
   const [showAnimateCSSLogo, setShowAnimateCSSLogo] = useState(false)
