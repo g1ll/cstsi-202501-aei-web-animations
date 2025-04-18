@@ -28,7 +28,9 @@ export const Exemplo05Styles = createGlobalStyle`
 			transform-origin: 50% 50%; 
 		}
 
-		.nes-btn {
+		.nes-btn .is-error {
 			border-image-repeat: stretch !important;
 		}
+
+		
 `

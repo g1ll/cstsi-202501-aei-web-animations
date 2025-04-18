@@ -168,9 +168,9 @@ const Exemplo05SVGIcons = () => {
                 <a href="https://animejs.com/documentation/" target="_blank"> AnimeJS</a>
             </h2>
             <ContainerExamples ref={rootScope}>
-                <div className="nes-container with-title examples-containers">
+                <div className="nes-container with-title ">
                     <span className="title">Exemplo 4.1</span>
-                    <div id="svg-container" onClick={handleAnimatePhone}>
+                    <div id="svg-container" onClick={handleAnimatePhone} className="nes-pointer">
                         {/* <?xml version="1.0" encoding="iso-8859-1"?> */}
                         {/* Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools */}
                         <svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -209,9 +209,9 @@ const Exemplo05SVGIcons = () => {
                 </div>
 
 
-                <div className="nes-container with-title examples-containers">
+                <div className="nes-container with-title ">
                     <span className="title">Exemplo 4.2</span>
-                    <div id="container-svg-2"
+                    <div id="container-svg-2" className="nes-pointer"
                         onMouseEnter={handleMouseEnterJsAnimate}
                         onMouseLeave={handleMouseLeaveJsAnimate}
                     >
@@ -239,14 +239,14 @@ const Exemplo05SVGIcons = () => {
                 </div>
 
 
-                <div className="nes-container with-title examples-containers">
+                <div className="nes-container with-title ">
                     <span className="title">Exemplo 4.3</span>
-                    <div id="container-svg-3"
+                    <div id="container-svg-3" className="nes-pointer"
                         onClick={()=>scope.current.methods.openCloseButton()}
                     >
                         <svg width="100" height="70" viewBox="0 0 40 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="AnimationButtonPoligon">
-                                <rect width="40" height="29" fill="white" />
+                                <rect width="40" height="29" fill="none" />
                                 <g id="btnOpen">
                                     <path d="M5 3.72778H35V8.72778H5V3.72778Z" fill="#0a0909" fillOpacity="0.85" />
                                     <path d="M5 11.7278H35V16.7278H5V11.7278Z" fill="#0a0909" fillOpacity="0.85" />
