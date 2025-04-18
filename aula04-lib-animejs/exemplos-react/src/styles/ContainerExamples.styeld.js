@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const ContainerExamples = styled.div`
-	flex:row;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	margin-top: 5%;
 	width: 75%;
 	align-items: center;
 	text-align: center;
-
 
 	.btn {
 		margin: 15px;
@@ -29,6 +29,8 @@ export const ContainerExamples = styled.div`
 	  display: flex;
       flex-direction: column;
       align-items: center;
+	  margin-top: 5%;
+	  width: 75%;
 	}
 
 

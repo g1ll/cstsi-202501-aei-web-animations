@@ -6,9 +6,11 @@ import { GlobalStyle } from './styles/globals.styled'
 import HeaderLinks from './components/HeaderLinks/HeaderLinks'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <GlobalStyle />
-    <HeaderLinks />
-    <RouterProvider router={routes} />
-  </StrictMode>,
+  <>
+    <StrictMode>
+      <GlobalStyle />
+      <HeaderLinks />
+      <RouterProvider router={routes} />
+      </StrictMode>
+  </>,
 )
