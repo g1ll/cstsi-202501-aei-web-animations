@@ -8,11 +8,13 @@ import App from "../App";
 import Exemplo01Animation from "../pages/Exemplo01Intro/Exemplo01Intro";
 import Exemplo02SeletorUtils from "../pages/Exemplo02SeletorUtils/Exemplo02SeletorUtils";
 import Exemplo03SliderImagem from "../pages/Exemplo03SliderImagem/Exemplo03SliderImagem";
+import Exemplo04MotionPath from "../pages/Exemplo04MotionPath/Exemplo04MotionPath";
 
 export const pages = [
     {path:"exemplo-01-simples",  title: 'Introdução a Biblioteca', el: <Exemplo01Animation/>},
     {path:"exemplo-02-seletor-utils",  title: 'Seletores com o Objeto Utils', el: <Exemplo02SeletorUtils/>},
     {path: 'exemplo-03-slider-imagem', title: 'Slider Imagem', el: <Exemplo03SliderImagem/>},
+    {path: 'exemplo-04-motion-path', title: 'SVG Motion Path', el: <Exemplo04MotionPath/>},
 ]
 
 const routes = createBrowserRouter(
