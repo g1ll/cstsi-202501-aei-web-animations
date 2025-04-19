@@ -10,6 +10,7 @@ import Exemplo02SeletorUtils from "../pages/Exemplo02SeletorUtils/Exemplo02Selet
 import Exemplo03SliderImagem from "../pages/Exemplo03SliderImagem/Exemplo03SliderImagem";
 import Exemplo04MotionPath from "../pages/Exemplo04MotionPath/Exemplo04MotionPath";
 import Exemplo05SVGIcons from "../pages/Exemplo05SVGIcons/Exemplo05SVGIcons";
+import Exemplo06ToMorph from "../pages/Exemplo06ToMorph/Exemplo06ToMorph";
 
 export const pages = [
     {path:"exemplo-01-simples",  title: 'Introdução a Biblioteca', el: <Exemplo01Animation/>},
@@ -17,6 +18,7 @@ export const pages = [
     {path: 'exemplo-03-slider-imagem', title: 'Slider Imagem', el: <Exemplo03SliderImagem/>},
     {path: 'exemplo-04-motion-path', title: 'SVG Motion Path', el: <Exemplo04MotionPath/>},
     {path: 'exemplo-05-svg-icon', title: 'Animando um Icone SVG' , el: <Exemplo05SVGIcons/>},
+    {path: 'exemplo-06-morph-svg', title: 'Função Morph SVG', el: <Exemplo06ToMorph/>},
 ]
 
 const routes = createBrowserRouter(
