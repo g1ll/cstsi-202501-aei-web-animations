@@ -1,6 +1,6 @@
 const { animate, svg, utils } = anime;
 const $ = utils.$;
-//Animação 5.1
+//Animação 6.1
 const [$squarePath, $jsPath, $ecmaPath, $sPath] = $('#svg_js_logo path');
 
 const anime3 = animate($squarePath,  //alvo da animação (elemento svg
@@ -52,7 +52,7 @@ anime3.onPause = () => {
     anime4.pause();
 }
 
-//Animação 5.2
+//Animação 6.2
 const $pathsTargetsOdd = $("#btnOpen path:nth-of-type(odd)");
 const $pathTargetEven = $("#btnOpen path:nth-of-type(even)");
 const $pathTargetClose = $("#btnClose");

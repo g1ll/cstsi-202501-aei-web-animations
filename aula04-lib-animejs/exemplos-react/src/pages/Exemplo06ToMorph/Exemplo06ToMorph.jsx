@@ -15,6 +15,7 @@ const Exemplo06ToMorph = () => {
 
             console.log([$squarePath, $jsPath, $jsPathBkp, $ecmaPath, $sPath])
 
+            //animacao 6.1
             const anime3 = animate($squarePath,  //alvo da animação (elemento svg
                 {
                     // fill:[							//propriedade a ser modificada (fill)
@@ -69,7 +70,7 @@ const Exemplo06ToMorph = () => {
             self.add('stopJsLogoAnimation', () => anime3.pause())
 
 
-            //Animação 5.2
+            //Animação 6.2
             const $pathsTargetsOdd = $("#btnOpen path:nth-of-type(odd)");
             const $pathTargetEven = $("#btnOpen path:nth-of-type(even)");
             const $pathTargetClose = $("#btnClose");
