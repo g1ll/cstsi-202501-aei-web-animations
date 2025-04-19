@@ -1,10 +1,11 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const Exemplo05Styles = createGlobalStyle`
     #root {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			/* background-color: #f00; */
 		}
 
 		.examples-containers {

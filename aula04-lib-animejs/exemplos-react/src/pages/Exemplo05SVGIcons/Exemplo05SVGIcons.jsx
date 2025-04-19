@@ -10,7 +10,7 @@ const Exemplo05SVGIcons = () => {
     const scope = useRef(null)
 
     useEffect(() => {
-        scope.current = createScope(rootScope.current).add(self => {
+        scope.current = createScope({ rootScope }).add(self => {
 
             const $ = utils.$;
             
