@@ -88,8 +88,8 @@ const Exemplo06ToMorph = () => {
             const anime6 = animate($pathTargetEven,
                 {
                     d: {
-                        from: svg.morphTo($pathIdleBtnOpen), 
-                        to: svg.morphTo($pathTargetClose)
+                        from: svg.morphTo($pathIdleBtnOpen,1), 
+                        to: svg.morphTo($pathTargetClose,1)
                     },
                     duration: 500,
                     delay: 250,
