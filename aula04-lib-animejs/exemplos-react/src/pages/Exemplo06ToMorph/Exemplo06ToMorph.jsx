@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import { ContainerExamples } from "../../styles/ContainerExamples.styeld"
 import { Exemplo06Styles } from "./Exemplo06ToMorph.styled"
 import { animate, createScope, svg, utils } from "animejs"
+import Hamburger from "../../components/animated/MenuIcons/Hamburger/Hamburger"
 
 const Exemplo06ToMorph = () => {
 
@@ -98,16 +99,6 @@ const Exemplo06ToMorph = () => {
                     reverse: true
                 });
 
-            // $("#container-svg-3 svg")[0].onclick = () => {
-            //     if (anime5.targets[0].style.opacity == 1) {
-            //         anime5.play();
-            //         anime6.play();
-            //     } else {
-            //         anime6.reverse();
-            //         anime5.reverse();
-            //     }
-            // }
-
             self.add('runAnimationBtn', () => {
                 if (anime5.targets[0].style.opacity == 1) {
                     anime5.play();
@@ -125,13 +116,12 @@ const Exemplo06ToMorph = () => {
         }
     }, [])
 
-    const handleMouseEnterJsLogo = (e) => {
-        console.log(e.target)
+    const handleMouseEnterJsLogo = () => {
         scope.current.methods.startJsLogoAnimation()
         console.log(scope.current)
     }
 
-    const handleAnimationBtn = (e) => {
+    const handleAnimationBtn = () => {
         scope.current.methods.runAnimationBtn()
     }
 
@@ -194,6 +184,11 @@ const Exemplo06ToMorph = () => {
                             </g>
                         </svg>
                     </div>
+                </div>
+
+                <div className="nes-container with-title nes-pointer">
+                    <span className="title">Exemplo 6.3</span>
+                    <Hamburger width={50} height={35} border={true}/>
                 </div>
                 <div>
                     <a href="/">
