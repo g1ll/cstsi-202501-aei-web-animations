@@ -8,9 +8,9 @@ const Hamburger = ({width, height, border}) => {
     const scope = useRef(null)
 
     useEffect(() => {
-        scope.current = createScope({ rootScope }).add(self => {
+        scope.current = createScope({ root:rootScope }).add(self => {
             const $ = utils.$;
-          
+
             const $pathsTargetsOdd = $(".hamburgerIcon path:nth-of-type(odd)");
             const $pathTargetEven = $(".hamburgerIcon path:nth-of-type(even)");
             const $pathTargetClose = $(".closedPath");
@@ -19,8 +19,8 @@ const Hamburger = ({width, height, border}) => {
             const openToClosed = animate($pathsTargetsOdd,
                 {
                     opacity: [1, 0],
-                    duration: 250,
-                    delay: 500,
+                    duration: 150,
+                    delay: 200,
                     autoplay: false,
                     ease: 'linear',
                 });
@@ -34,7 +34,7 @@ const Hamburger = ({width, height, border}) => {
                     duration: 500,
                     delay: 250,
                     autoplay: false,
-                    ease: 'linear',
+                    ease: 'inOutQuad',
                     reverse: true
                 });
 
@@ -56,12 +56,12 @@ const Hamburger = ({width, height, border}) => {
     const handleAnimationStart = () => scope.current.methods.runAnimation()
 
     return (
-        <HamburgerStyled ref={rootScope} border={border}
+        <HamburgerStyled ref={rootScope} $hasBorder={border}
             onClick={handleAnimationStart}
         >
             <svg width={width ?? "100"} height={height ?? "70"} viewBox={`0 0 40 29`} fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
-                    <rect width="40" height="29" fill="white" />
+                    <rect width="40" height="29" fill="transparent" />
                     <g className="hamburgerIcon">
                         <path d="M5 3.72778H35V8.72778H5V3.72778Z" fill="#0a0909" fillOpacity="0.85" />
                         <path d="M5 11.7278H35V16.7278H5V11.7278Z" fill="#0a0909" fillOpacity="0.85" />

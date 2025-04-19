@@ -27,4 +27,15 @@ export const Exemplo06Styles = createGlobalStyle`
 		.nes-btn {
 			border-image-repeat: stretch !important;
 		}
+
+		.menu_icons_container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			flex-direction: row;
+			width: 100%;
+			height: 100%;
+			/* background-color: green; */
+		}
 `;

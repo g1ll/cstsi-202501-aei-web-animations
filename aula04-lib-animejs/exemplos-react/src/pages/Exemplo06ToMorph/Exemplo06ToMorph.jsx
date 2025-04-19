@@ -10,7 +10,7 @@ const Exemplo06ToMorph = () => {
     const scope = useRef(null)
 
     useEffect(() => {
-        scope.current = createScope({ rootScope }).add(self => {
+        scope.current = createScope({ root: rootScope }).add(self => {
             const $ = utils.$;
             const [$squarePath, $jsPath, $jsPathBkp, $ecmaPath, $sPath] = $('#svg_js_logo path');
 
@@ -44,7 +44,7 @@ const Exemplo06ToMorph = () => {
                     //     { d: svg.morphTo($ecmaPath), duration: 500 },
                     //     { d: svg.morphTo($jsPathBkp), duration: 500 },
                     // ],
-                    d:{
+                    d: {
                         from: svg.morphTo($jsPathBkp),
                         to: svg.morphTo($ecmaPath),
                     },
@@ -89,8 +89,8 @@ const Exemplo06ToMorph = () => {
             const anime6 = animate($pathTargetEven,
                 {
                     d: {
-                        from: svg.morphTo($pathIdleBtnOpen,1), 
-                        to: svg.morphTo($pathTargetClose,1)
+                        from: svg.morphTo($pathIdleBtnOpen, 1),
+                        to: svg.morphTo($pathTargetClose, 1)
                     },
                     duration: 500,
                     delay: 250,
@@ -125,7 +125,6 @@ const Exemplo06ToMorph = () => {
         scope.current.methods.runAnimationBtn()
     }
 
-
     return (
         <>
             <Exemplo06Styles />
@@ -157,7 +156,7 @@ const Exemplo06ToMorph = () => {
                                 <path style={{ opacity: 1 }}
                                     d="M59.5238 82.5602L67.1754 78.1301C69.1898 81.4195 71.8078 83.8359 76.439 83.8359C80.3332 83.8359 82.816 81.8891 82.816 79.2039C82.816 75.982 80.2652 74.8406 75.9691 72.9617L73.6203 71.9539C66.8402 69.0684 62.3429 65.4434 62.3429 57.791C62.3429 50.7426 67.7129 45.3723 76.1039 45.3723C82.0781 45.3723 86.3742 47.4535 89.4617 52.8906L82.1445 57.5898C80.5332 54.7035 78.7886 53.5625 76.1035 53.5625C73.3511 53.5625 71.6058 55.3078 71.6058 57.5898C71.6058 60.409 73.3512 61.5508 77.3785 63.2961L79.7277 64.3027C87.716 67.7266 92.2133 71.2168 92.2133 79.0699C92.2133 87.5285 85.5679 92.1598 76.6402 92.1598C67.914 92.1598 62.2758 87.9977 59.5238 82.5602Z"
                                     fill="black" />
-                                
+
                             </g>
                         </svg>
                     </div>
@@ -167,7 +166,7 @@ const Exemplo06ToMorph = () => {
                     <span className="title">Exemplo 6.2</span>
                     <div id="container-svg-3"
                         onClick={handleAnimationBtn}
-                        >
+                    >
                         <svg width="100" height="70" viewBox="0 0 40 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="AnimationButtonPoligon">
                                 <rect width="40" height="29" fill="white" />
@@ -179,8 +178,8 @@ const Exemplo06ToMorph = () => {
                                 <path id="btnClose"
                                     d="M11.5 2L20.25 10.7278L29 2L32.5 5.5L24 14.5L32.5 23.2278L29 27L20.25 17.5L11 27L7.5 23.5L16.5 14.2278L8 5.5L11.5 2Z"
                                     fill="#0a0909" style={{ opacity: 0 }} />
-                                
-                                <path id="idleBtnOpen" d="M5 11.7278H35V16.7278H5V11.7278Z" fill="#0a0909" fillOpacity="0.85" style={{opacity:0}}/>
+
+                                <path id="idleBtnOpen" d="M5 11.7278H35V16.7278H5V11.7278Z" fill="#0a0909" fillOpacity="0.85" style={{ opacity: 0 }} />
                             </g>
                         </svg>
                     </div>
@@ -188,7 +187,10 @@ const Exemplo06ToMorph = () => {
 
                 <div className="nes-container with-title nes-pointer">
                     <span className="title">Exemplo 6.3</span>
-                    <Hamburger width={50} height={35} border={true}/>
+                    <div className="menu_icons_container">
+                        <Hamburger width={48} height={34} border={true} />
+                        <Hamburger width={64} height={42} border={false} />
+                    </div>
                 </div>
                 <div>
                     <a href="/">
