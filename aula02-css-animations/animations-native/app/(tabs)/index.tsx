@@ -1,5 +1,6 @@
-import { Image, StyleSheet, Platform } from 'react-native';
 
+import React from 'react';
+import { Image, Platform, StyleSheet } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -21,24 +22,24 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="subtitle">CSTSI-Animação de Elementos de Interface</ThemedText>
       </ThemedView>
-        <ThemedView style={styles.titleContainer}>
+      <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Exemplos React-Native!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Teste Suporte com Styled Component</ThemedText>
         <ThemedText>
-         Using styled component to make a loader with animated rotation image.
+         Animação utilizando CSS e Styled-components.
         </ThemedText>
         {/*Apenas para a plataforma Web*/}
-         { Platform.OS!=='ios' && Platform.OS!=='android' && <LoaderSquareImageStyled/>}
+        <LoaderSquareImageStyled />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Reanimated Componentes com Hooks </ThemedText>
         <ThemedText>
-         A biblioteca Reanimated utiliza diversos Hooks para gerenciar os frames da animação e atualizar os estilos. 
-         Os Hooks cumprem papeis semelhantes as propriedades CSS, mas com uma abordagem diferente.
-         
+          A biblioteca Reanimated utiliza diversos Hooks para gerenciar os frames da animação e atualizar os estilos.
+          Os Hooks cumprem papeis semelhantes as propriedades CSS, mas com uma abordagem diferente.
+
         </ThemedText>
         <LoaderSquareImageWithHooks />
       </ThemedView>

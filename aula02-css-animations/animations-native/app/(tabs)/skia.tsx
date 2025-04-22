@@ -1,5 +1,6 @@
 import { StyleSheet, Image, Platform } from 'react-native';
 
+import React from 'react';
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -7,6 +8,9 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { useColorScheme } from '@/hooks/useColorScheme.web';
+
+import GoblinSprites from '@/components/animated/GoblinSprites/GoblinSprites';
+import Animated from 'react-native-reanimated';
 
 type colorThemeIcons = { dark: string; light: string };
 
@@ -31,22 +35,31 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Biblioteca Skia para Gráficos 2D</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>Motor gráfico para renderizações 2D utilizando Canvas, no momento só está funcionando para versão web.
+        É preciso alterar a propriedade main do package.json para "main": "index.web.tsx".
+      </ThemedText>
+      <Collapsible title="Sobre a biblioteca Skia">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          A biblioteca Skia da Shopify pretende renderizar gráficos 2D de forma mais performática.
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
+        <ExternalLink href="https://shopify.github.io/react-native-skia/">
+          <ThemedText type="link">Skia by Shopfy</ThemedText>
         </ExternalLink>
       </Collapsible>
-
+      <Collapsible title="Renderizando a SpriteSheet do Goblin">
+        <ThemedView style={{ flexDirection: 'column' }}>
+          <Image
+            source={require('@/assets/images/goblin_big.png')}
+            style={styles.image}
+          />
+        </ThemedView>
+      </Collapsible>
+      <Collapsible title="Sprites no Canvas com Skia (web)">
+        <ThemedView style={{ flexDirection: 'column' }}>
+          {Platform.OS === 'web' && <GoblinSprites image={require('@/assets/images/goblin_big.png')} />}
+          {/* <GoblinSprites image={require('@/assets/images/goblin_big.png')} /> */}
+        </ThemedView>
+      </Collapsible>
     </ParallaxScrollView>
   );
 }
@@ -60,5 +73,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  image: {
+    height: 178,
+    width: 290,
   },
 });
