@@ -1,0 +1,61 @@
+@import "../../src/styles/colors";
+
+
+@tailwind utilities;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.examples-containers {
+    margin-top: 5%;
+    width: 50%;
+}
+
+.btn {
+    margin: 15px;
+    width: 200px;
+}
+
+#circle {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+/* #phone {
+    transform-origin: 50% 50%;
+} */
+
+.nes-btn {
+    border-image-repeat: stretch !important;
+}
+
+@utility animate-play-all {
+    &:hover > * {
+        animation-play-state: running;
+    }
+}
+
+@utility rotate-center {
+     transform-origin: 50% 50%;
+     /* fill:red; */
+}
+
+@theme{
+    --animate-phone: phone .1s linear infinite alternate paused;
+    @keyframes phone {
+        0% {
+            transform: rotate(70deg);
+        },
+        50% {
+            transform: rotate(100deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}

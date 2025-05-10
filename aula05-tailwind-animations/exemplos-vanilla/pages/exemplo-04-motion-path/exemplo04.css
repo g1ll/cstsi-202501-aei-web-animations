@@ -1,0 +1,176 @@
+
+@import "../../src/styles/colors";
+
+@tailwind utilities;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    margin: 15px;
+    width: 200px;
+}
+
+.examples-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 75%;
+}
+
+.container {
+    margin-top: 1%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuit {
+    width: 500px;
+    height: 345px;
+    /* overflow: hidden; */
+    --posicao-x: 100px;
+    --posicao-y: 100px;
+
+}
+
+.player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+
+#luigi {
+    background-image: url('/assets/img/mario-kart/luigi.png');
+    z-index: 11;
+}
+
+#mario {
+    background-image: url('/assets/img/mario-kart/mario.png');
+    z-index: 12;
+}
+
+.nes-btn {
+    border-image-repeat: stretch !important;
+}
+
+.drone-offset {
+    /*offset-path: path("M1 3C1 3 556.501 243 1014 1");*/
+    offset-path: path("M1.008 5.054C41.9932 -15.4386 128.008 48.8634 205.508 25.9587C283.008 3.05401 370.508 21.5543 443.008 81.7774C515.508 142 623.508 25.9585 759.508 87.9184C895.508 149.878 927.464 48.8325 1014.01 3.054");
+    /*offset-path: path("M0.743199 257.48C0.743199 257.48 198.545 90.0487 368.243 319.98C537.941 549.911 801.743 -43.0205 755.743 3.47951");*/
+}
+
+/* .drone-container:hover svg #drone {
+    animation-play-state: running;
+} */
+
+@utility svg-animate-play-hover {
+    &:hover svg g {
+        animation-play-state: running;
+    }
+}
+
+@theme{
+    --animate-drone: move-drone 5s linear infinite alternate paused;
+    @keyframes move-drone {
+        100% {
+            offset-distance: 100%;
+            motion-offset: 10%;
+        }
+    }
+}
+
+/* @keyframes move-drone {
+    100% {
+        offset-distance: 100%;
+        motion-offset: 10%;
+    }
+} */
+
+@media screen and (max-width: 680px) {
+
+    .nes-container,.examples-containers {
+        padding: 5px;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuit {
+        overflow: hidden;
+
+        #luigiDiv,#marioDiv  {
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            /* background-color: red; */
+
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .nes-container,.examples-containers {
+        width: max(75%,280px);
+        padding: 0px;
+        .container{
+            width: 256px;
+        }
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circuit {
+        overflow: hidden;
+        #luigiDiv,#marioDiv  {
+            width: 15px;
+            height: 15px;
+            background-size: contain;
+            /* background-color: red; */
+
+        }
+    }
+}
+
+.mario-path{
+    offset-path:path('M28 117.5C28 117.5 332 108 355.5 113.5C379 119 387.5 121 391.5 125C395.5 129 418 160.5 419.5 164.5C421 168.5 425.5 211.5 419.5 217C413.5 222.5 390.5 240 390 254.5C389.5 269 424 275.5 436 272C448 268.5 431.5 271 470.5 264');
+}
+
+.luigi-path{
+    offset-path:path('M29 124.894C29 124.894 326.249 122.156 341.855 126.262C357.46 130.368 360.437 136.038 370.993 140.466C382.442 145.269 389.199 149.116 396.475 158.442C405.687 170.249 404.371 180.033 406.159 194.393C407.739 207.092 398.46 215.047 401.422 227.543C405.023 242.734 405.137 255.34 421.445 258.566C437.753 261.792 470 258.566 470 258.566')
+}
+
+@utility svg-animate-play-trigger {
+    &:hover div{
+        animation-play-state: running;
+    }
+}
+
+@theme{
+    
+    --animate-player-1: run 1s ease-in 1 paused forwards;
+    --animate-player-2: run 1s ease-out .5s paused forwards; 
+    
+    @keyframes run {
+        100% {
+            offset-distance: 100%;
+            motion-offset: 100%;
+        }
+    }
+
+
+}
+
