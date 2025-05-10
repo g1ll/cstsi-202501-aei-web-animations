@@ -44,6 +44,7 @@ const Exemplo04MotionPath = () => {
             }
 
             const resizeScreen = () => {
+                self.current.revert();
                 console.log('resize');
                 const resizedPath = svg.createMotionPath('.circuit svg path');
                 runMario.anime = animate(

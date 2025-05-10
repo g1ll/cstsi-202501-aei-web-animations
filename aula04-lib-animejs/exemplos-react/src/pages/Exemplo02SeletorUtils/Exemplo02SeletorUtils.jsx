@@ -5,12 +5,12 @@ import { ContainerExamples } from '../../styles/ContainerExamples.styeld';
 
 const Exemplo02SeletorUtils = () => {
 
-    const root = useRef(null);
+    const animeContainer = useRef(null);
     const scope = useRef(null);
 
     useEffect(() => {
 
-        scope.current = createScope({ root }).add(scope => {
+        scope.current = createScope({ root:animeContainer }).add(scope => {
             //Animação 2.1
             const $svgTarget = utils.$('#sgv-geometry path');
             //console.log($svgTarget);
@@ -54,7 +54,7 @@ const Exemplo02SeletorUtils = () => {
                 <a href="https://animejs.com/documentation/" target="_blank"> AnimeJS</a>
             </h2>
             <ContainerExamples>
-                <div className="nes-container with-title examples-containers" ref={root}>
+                <div className="nes-container with-title examples-containers" ref={animeContainer}>
                     <span className="title">Exemplo 2.1</span>
                     <div id="svg-container" >
                         <svg id='sgv-geometry' width="98" height="100" viewBox="0 0 98 100" fill="none"

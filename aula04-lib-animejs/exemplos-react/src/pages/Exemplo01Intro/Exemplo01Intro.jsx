@@ -6,7 +6,7 @@ const Exemplo01Intro = () => {
 
   useEffect(() => {
     animate('#circle', { 		//alvo da animação, pode ser mais de um
-      translateX: 300,			//propriedade a ser modificada (camelCase)
+      translateX: 100,			//propriedade a ser modificada (camelCase)
       backgroundColor: '#0f0',	//propriedade css em camelCase
       borderRadius: '0%',			//propriedade css em camelCase
       duration: 4000,				//duração em  milisegundos (ms) (animation-duration)

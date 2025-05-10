@@ -2,7 +2,6 @@ const { animate, waapi, utils } = anime;
 
 const $ = utils.$; //Inspirado na biblioteca jQuery
 
-
 export function listLettersAnimation($target,count=10){
     setTimeout(() => {
         animate($target,{

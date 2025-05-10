@@ -7,7 +7,7 @@ const anime3 = animate($squarePath,  //alvo da animação (elemento svg
     {
         //Desta forma podemos definir duração para cada keyframe
         //  fill:[							//propriedade a ser modificada (fill)
-        // 	{value:'#ff0000', duration:1000}, 
+        // 	{value:'#ff0000', duration:1000},
         // 	{value:'#00ff00', duration:2000},
         // 	{value:'#0000ff', duration:2000}
         // ],
@@ -34,7 +34,7 @@ const anime4 = animate($jsPath,  //alvo da animação (elemento svg
         ],
         loop: true, 			//animação em loop (animation-count:infinite)
         autoplay: false,
-        alternate: true,
+        alternate: true,    //animation-direction: alternate
         // ease: 'linear'	//função de tempo  (animation-timing-function)
         ease: 'inQuad'	//função de tempo  (animation-timing-function)
     });

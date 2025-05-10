@@ -6,6 +6,8 @@ const Hamburger = ({width, height, border}) => {
 
     const rootScope = useRef(null)
     const scope = useRef(null)
+    const widthSize = width && border ? width - 10: width ?? "100"
+    const heightSize = height && border ? height - 10: height ?? "70"
 
     useEffect(() => {
         scope.current = createScope({ root:rootScope }).add(self => {
@@ -59,7 +61,8 @@ const Hamburger = ({width, height, border}) => {
         <HamburgerStyled ref={rootScope} $hasBorder={border}
             onClick={handleAnimationStart}
         >
-            <svg width={width ?? "100"} height={height ?? "70"} viewBox={`0 0 40 29`} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width={widthSize} height={heightSize} 
+                viewBox={`0 0 40 29`} fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <rect width="40" height="29" fill="transparent" />
                     <g className="hamburgerIcon">

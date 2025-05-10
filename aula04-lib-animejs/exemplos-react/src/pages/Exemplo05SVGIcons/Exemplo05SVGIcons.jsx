@@ -154,9 +154,9 @@ const Exemplo05SVGIcons = () => {
         scope.current.methods.playJsLogoAnimation()
     }
 
-    const handleMouseLeaveJsAnimate = () => {
-        scope.current.methods.stopJsLogoAnimation()
-    }
+    // const handleMouseLeaveJsAnimate = () => {
+    //     scope.current.methods.stopJsLogoAnimation()
+    // }
 
 
     return (
@@ -213,7 +213,10 @@ const Exemplo05SVGIcons = () => {
                     <span className="title">Exemplo 4.2</span>
                     <div id="container-svg-2" className="nes-pointer"
                         onMouseEnter={handleMouseEnterJsAnimate}
-                        onMouseLeave={handleMouseLeaveJsAnimate}
+                        onMouseLeave={()=>{
+                            scope.current.methods.stopJsLogoAnimation()
+                            }
+                        }
                     >
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="svg_js_logo">

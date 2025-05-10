@@ -41,7 +41,7 @@ const Exemplo06ToMorph = () => {
             const anime4 = animate($jsPath,  //alvo da animação (elemento svg
                 {
                     // keyframes: [
-                    //     { d: svg.morphTo($ecmaPath), duration: 500 },
+                    //     { d: svg.morphTo($ecmaPath), duration: 10000 },
                     //     { d: svg.morphTo($jsPathBkp), duration: 500 },
                     // ],
                     d: {
@@ -140,7 +140,7 @@ const Exemplo06ToMorph = () => {
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="svg_js_logo"
                                 onMouseEnter={handleMouseEnterJsLogo}
-                                // onMouseEnter={() => scope.current.methods.startJsLogoAnimation()}
+                                //onMouseEnter={() => scope.current.methods.startJsLogoAnimation()}
                                 onMouseLeave={() => scope.current.methods.stopJsLogoAnimation()}
                             >
                                 <path d="M0 0H100V100H0V0Z" fill="#F7DF1E" />
@@ -189,7 +189,7 @@ const Exemplo06ToMorph = () => {
                     <span className="title">Exemplo 6.3</span>
                     <div className="menu_icons_container">
                         <Hamburger width={48} height={34} border={true} />
-                        <Hamburger width={64} height={42} border={false} />
+                        <Hamburger width={48} height={34} border={false} />
                     </div>
                 </div>
                 <div>
