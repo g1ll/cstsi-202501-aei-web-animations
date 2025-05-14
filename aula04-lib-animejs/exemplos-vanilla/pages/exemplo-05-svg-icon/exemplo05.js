@@ -22,13 +22,12 @@ const anime2 = animate(
         //loop: false, 			//animação em loop (animation-count:infinite)
         // loopDelay: 200,			//delay entre repetições do loop
         autoplay: false,		//Inicialiar a animação parada
-        easing: 'inBounce',	//função de tempo  (animation-timing-function)
+        ease: 'inBounce',	//função de tempo  (animation-timing-function)
         onComplete: () => anime2.reset()
     });
 
-const $svgContainer = $('#svg-container svg')[0]
-$svgContainer.onclick = () => anime2.play();
-// $svgContainer.onmouseleave = () => anime2.pause();
+const $svgElement = $('#svg-container svg')[0]
+$svgElement.onmousemove = () => anime2.play();
 
 
 //Animação 5.2
