@@ -5,7 +5,7 @@ export const ContainerExamples = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 5%;
-	width: 75%;
+	/*width: 75%;*/
 	align-items: center;
 	text-align: center;
 
@@ -30,7 +30,6 @@ export const ContainerExamples = styled.div`
       flex-direction: column;
       align-items: center;
 	  margin-top: 5%;
-	  width: 75%;
 	}
 
 

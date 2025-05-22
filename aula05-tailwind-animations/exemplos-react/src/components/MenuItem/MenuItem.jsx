@@ -55,13 +55,6 @@ const MenuItem = ({ path, title, index }) => {
     const menuItem = `Exemplo 0${index + 1} - ${(title)}`;
     const contentArray = menuItem.split('');
 
-    useEffect(() => { 
-        $('li').forEach((li,index) => {
-                listLettersAnimation($(`li:nth-of-type(${index+1}) span`),index+1)
-                li.onmouseenter = () => lettersAnimation($(`li:nth-of-type(${index+1}) span`))
-            });
-    }, []);
-
     return (
         <MenuItemStyled>
             <Link to={path}>
