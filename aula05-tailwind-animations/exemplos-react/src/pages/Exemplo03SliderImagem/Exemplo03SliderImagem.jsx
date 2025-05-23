@@ -1,24 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ContainerExamples } from '../../styles/ContainerExamples.styeld'
 import { Slider, SliderContainer, SliderElement, SliderItem, SliderList } from './Exemplo03SliderImagem.styled'
-import { animate, utils } from 'animejs'
+import { utils } from 'animejs'
+import "./exemplo03.css" //traz a classe animate-slide tailwind
 
 const Exemplo03SliderImagem = () => {
 
     const [activeItemIndex, setActiveItemIndex] = useState(0)
     
     const totalSlides = 6;
-
-    const slideAnimationOptions = useRef({
-        opacity: [0,1],
-        scale:['0.5', '1'],
-        filter:['blur(50px)', 'blur(0px)'],
-        delay: 100,
-        duration: 1000,
-        autoplay: true,
-        //ease: 'linear',
-        ease: "outElastic(1,.3)",
-      })
 
     const nextSlide = () => {
         if (activeItemIndex < totalSlides-1) 
@@ -30,13 +20,11 @@ const Exemplo03SliderImagem = () => {
          setActiveItemIndex(activeItemIndex-1)
     }
 
-    useEffect(() => {
-        animate(
-            utils.$(`li:nth-child(${activeItemIndex+1}) img`),
-            slideAnimationOptions.current
-        )
+    const activeImage = (index)=>(utils.$(`li:nth-child(${index+1}) img`)[0])
 
-    },[activeItemIndex, slideAnimationOptions])
+    useEffect(() => {
+        activeImage(activeItemIndex).classList.add('animate-slide')
+    },[activeItemIndex])
 
     return (
         <>

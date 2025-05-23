@@ -1,0 +1,27 @@
+@import "../../styles/tailwind.css";
+
+@utility animate-play-all {
+    &:hover > * {
+        animation-play-state: running;
+    }
+}
+
+@utility rotate-center {
+     transform-origin: 50% 50%;
+     /* fill:red; */
+}
+
+@theme{
+    --animate-phone: phone .1s linear infinite alternate paused;
+    @keyframes phone {
+        0% {
+            transform: rotate(70deg);
+        },
+        50% {
+            transform: rotate(100deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}

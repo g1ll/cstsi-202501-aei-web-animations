@@ -15,7 +15,7 @@ function App() {
         <h1>CSTSI - AEI
           <a target="_blank" href="#">&nbsp;Aula 05</a>
         </h1>
-        <ul className="z-20 w-full">
+        <ul className="z-20 w-full px-0">
           {pages.map(({ path, title }, index) => (
             <MenuItem
               key={index}

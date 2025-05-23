@@ -2,85 +2,23 @@
 import CircuitPath from './CircuitPath'
 import Drone from './Drone'
 import { ContainerExamples } from '../../styles/ContainerExamples.styeld'
-import { ContainerExamplesSVG, LuigiPlayer, MarioPlayer, SVGDroneContainer, SVGKartContainer } from './Exemplo04MotionPath.style'
-import { useEffect, useRef } from 'react'
-import { animate, createScope, svg } from 'animejs'
+import { ContainerExamplesSVG, LuigiPlayer, MarioPlayer, SVGKartContainer } from './Exemplo04MotionPath.style'
+import { useRef } from 'react'
+// import { utils } from 'animejs'
+
+import "./motionPlayers.css"
 
 const Exemplo04MotionPath = () => {
-
-
-    const rootScope = useRef(null)
-    const scope = useRef(null)
 
     const marioPlayer = useRef(null)
     const luigiPlayer = useRef(null)
 
-    useEffect(() => {
-        scope.current = createScope({ rootScope }).add(self => {
-            const $pathKartMario = svg.createMotionPath('.circuit svg #pathMario');
-            const $pathKartLuigi = svg.createMotionPath('.circuit svg #pathLuigi');
 
-            const runLuigi = {
-                anime:
-                    animate(luigiPlayer.current, {
-                        ...$pathKartLuigi,
-                        ease: 'outQuad',
-                        duration: 3500,
-                        delay: 1000,
-                        autoplay: false,
-                    })
-            }
-
-            const runMario = {
-                anime: animate(
-                    marioPlayer.current,
-                    {
-                        ...$pathKartMario,
-                        ease: 'in',
-                        duration: 3500,
-                        autoplay: false,
-                        onBegin: () => runLuigi.anime.play(),
-                    })
-            }
-
-            const resizeScreen = () => {
-                self.current.revert();
-                console.log('resize');
-                const resizedPath = svg.createMotionPath('.circuit svg path');
-                runMario.anime = animate(
-                    marioPlayer.current,
-                    {
-                        ...resizedPath,
-                        ease: 'in',
-                        duration: 3500,
-                        autoplay: false,
-                        onBegin: () => runLuigi.anime.play(),
-                    })
-
-                runLuigi.anime = animate(luigiPlayer.current, {
-                    ...resizedPath,
-                    ease: 'outQuad',
-                    duration: 3500,
-                    delay: 1000,
-                    // zIndex: [11, 15],
-                    autoplay: false,
-                })
-            }
-
-            self.add('marioStart', () => runMario.anime.play())
-            self.add('resizeScreen', resizeScreen)
-            window.addEventListener('resize', self.methods.resizeScreen)
-        })
-
-        return () => {
-            window.removeEventListener('resize', scope.current.methods.resizeScreen)
-            scope.current.revert()
-        }
-    }, [])
-
-
-    const handleClick = () => scope.current.methods.marioStart();
-
+    const handleClick = () => {
+        console.log(marioPlayer.current.classList)
+        marioPlayer.current.classList.add('animate-play')
+        luigiPlayer.current.classList.add('animate-play')
+    };
 
     return (
         <>
@@ -90,19 +28,27 @@ const Exemplo04MotionPath = () => {
                 <a href="https://animejs.com/documentation/" target="_blank"> AnimeJS</a>
             </h2>
             <ContainerExamples>
-                <ContainerExamplesSVG className="nes-container with-title">
+                <ContainerExamplesSVG
+                    className="nes-container with-title svg-animate-play-hover">
                     <span className="title">Exemplo 4.1</span>
-                    <SVGDroneContainer >
+                    <div className="w-full! h-full! overflow-hidden">
                         <Drone />
-                    </SVGDroneContainer>
+                    </div >
                 </ContainerExamplesSVG>
                 <ContainerExamplesSVG className="nes-container with-title">
                     <span className="title">Exemplo 4.2</span>
                     <SVGKartContainer>
-                        <div className="container" ref={rootScope}>
+                        <div className="container">
                             <div className="circuit">
-                                <MarioPlayer ref={marioPlayer} onClick={handleClick} />
-                                <LuigiPlayer ref={luigiPlayer} />
+                                <a href="#">
+                                    <div
+                                        className="mario-path h-[80px] w-[50px] z-35 top-[15%] left-[55%] absolute border-3 opacity-1 bg-slate-500 bg-none border-red-500">
+                                    </div>
+                                    <MarioPlayer ref={marioPlayer} onClick={handleClick}
+                                        className="mario-path animate-player-1" />
+                                    <LuigiPlayer ref={luigiPlayer} 
+                                            className="luigi-path animate-player-2" />
+                                </a>
                                 <CircuitPath />
                             </div>
                         </div>

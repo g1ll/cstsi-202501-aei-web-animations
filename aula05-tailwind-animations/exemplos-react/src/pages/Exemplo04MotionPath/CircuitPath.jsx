@@ -2,7 +2,7 @@ import React from 'react'
 
 const CircuitPath = () => {
     return (
-        <svg width="500" height="345" viewBox="0 0 500 345" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg className="z-30" width="500" height="345" viewBox="0 0 500 345" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <rect width="500" height="345" fill="white" />
             <rect y="1" width="500" height="344" fill="url(#pattern0_2324_4)" />
             <path id="pathMario" d="M28 117.5C28 117.5 332 108 355.5 113.5C379 119 387.5 121 391.5 125C395.5 129 418 160.5 419.5 164.5C421 168.5 425.5 211.5 419.5 217C413.5 222.5 390.5 240 390 254.5C389.5 269 424 275.5 436 272C448 268.5 431.5 271 470.5 264" stroke="#F50707" style={{opacity: 0}}/>

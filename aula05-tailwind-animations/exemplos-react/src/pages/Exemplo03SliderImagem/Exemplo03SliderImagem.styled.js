@@ -45,5 +45,6 @@ export const SliderElement = styled.div`
 `;
 
 export const SliderItem = styled.li`
-    display: ${props=>props.$isActive ? "block" : "none"};    
+    display: ${props=>props.$isActive ? "block" : "none"};  
+    opacity:1;
 `;

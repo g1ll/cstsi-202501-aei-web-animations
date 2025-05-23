@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @theme{
+    --color-primary-500: #92cc41;
     --animate-flip: flip 2s ease-in-out 2s;
     @keyframes flip {
         0%,100% {

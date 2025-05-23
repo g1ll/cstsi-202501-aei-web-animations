@@ -1,0 +1,34 @@
+@import "../../styles/tailwind.css";
+
+.mario-path{
+    offset-path:path('M28 117.5C28 117.5 332 108 355.5 113.5C379 119 387.5 121 391.5 125C395.5 129 418 160.5 419.5 164.5C421 168.5 425.5 211.5 419.5 217C413.5 222.5 390.5 240 390 254.5C389.5 269 424 275.5 436 272C448 268.5 431.5 271 470.5 264');
+}
+
+.luigi-path{
+    offset-path:path('M29 124.894C29 124.894 326.249 122.156 341.855 126.262C357.46 130.368 360.437 136.038 370.993 140.466C382.442 145.269 389.199 149.116 396.475 158.442C405.687 170.249 404.371 180.033 406.159 194.393C407.739 207.092 398.46 215.047 401.422 227.543C405.023 242.734 405.137 255.34 421.445 258.566C437.753 261.792 470 258.566 470 258.566')
+}
+
+@utility svg-animate-play-trigger {
+    &:hover div{
+        animation-play-state: running;
+    }
+}
+
+@utility animate-play {
+    animation-play-state: running;
+}
+
+@theme{
+    
+    --animate-player-1: run 1s ease-in 1 paused forwards;
+    --animate-player-2: run 1s ease-out .5s paused forwards; 
+    
+    @keyframes run {
+        100% {
+            offset-distance: 100%;
+            motion-offset: 100%;
+        }
+    }
+
+
+}

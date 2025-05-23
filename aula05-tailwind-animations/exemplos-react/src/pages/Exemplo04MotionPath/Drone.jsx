@@ -1,9 +1,10 @@
 import React from 'react'
+import "./drone.css"
 
 const Drone = () => {
     return (
-        <svg width="600" height="200" viewBox="0 0 1400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id='drone' clipPath="url(#clip0_2308_549)">
+        <svg className="w-full! z-full!" width="600" height="200" viewBox="0 0 1400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id='drone' clipPath="url(#clip0_2308_549)" className="drone-offset animate-drone">
                 <path d="M188.5 93.8699H178.167V86.0351H188.5V93.8699Z" fill="#252545" />
                 <path d="M188.5 97.4382H178.167V93.8698H188.5V97.4382Z" fill="#54C5BB" />
                 <path

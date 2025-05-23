@@ -25,22 +25,18 @@ export const MenuItemStyled = styled.li`
   }
   
 
-  h3{
+  /* h3{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(100, 1fr);
-    margin: 0;
-    place-items: center;
     margin-bottom: .5rem;
     font-size: .5em;
     transition: 5s;
-  }
+  } */
 
-  h3:hover{
+  /* h3:hover{
     background-color:var(--bg-primary);
     border-radius: 5px;
     transition: 1s;
-  }
+  } */
 
   @media (min-width: 450px) {
     h3{
