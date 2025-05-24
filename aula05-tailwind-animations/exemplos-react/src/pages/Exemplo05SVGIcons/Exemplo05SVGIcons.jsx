@@ -3,6 +3,9 @@ import { Exemplo05Styles } from './Exemplo05SVGIcons.styled'
 import { ContainerExamples } from '../../styles/ContainerExamples.styeld'
 import { useEffect, useRef } from 'react'
 import { animate, createScope, utils } from 'animejs'
+import { SVGatorCSSOnlyForReactJS } from './SVGatorCSSOnlyForReactJS'
+
+
 
 const Exemplo05SVGIcons = () => {
 
@@ -260,6 +263,13 @@ const Exemplo05SVGIcons = () => {
                                     fill="#0a0909" style={{ opacity: 0 }} />
                             </g>
                         </svg>
+                    </div>
+                </div>
+
+                <div className="nes-container with-title ">
+                    <span className="title">Exemplo 4.4</span>
+                    <div id="container-svg-3" className="nes-pointer">
+                        <SVGatorCSSOnlyForReactJS/>
                     </div>
                 </div>
 
