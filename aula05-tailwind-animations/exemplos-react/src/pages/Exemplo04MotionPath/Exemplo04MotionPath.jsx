@@ -1,10 +1,8 @@
-
 import CircuitPath from './CircuitPath'
 import Drone from './Drone'
 import { ContainerExamples } from '../../styles/ContainerExamples.styeld'
 import { ContainerExamplesSVG, LuigiPlayer, MarioPlayer, SVGKartContainer } from './Exemplo04MotionPath.style'
 import { useRef } from 'react'
-// import { utils } from 'animejs'
 
 import "./motionPlayers.css"
 

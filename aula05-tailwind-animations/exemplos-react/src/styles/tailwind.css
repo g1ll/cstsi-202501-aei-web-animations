@@ -13,4 +13,10 @@
             transform: rotateY(180deg);
         }
     }
+
+    --animate-scalereact: reactscale 5000ms ease 1;
+    @keyframes reactscale {
+        0% {transform: scale(.1)},
+        100%{transform: scale(1)}
+    }
 }

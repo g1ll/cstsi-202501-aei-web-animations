@@ -31,8 +31,10 @@ function App() {
             </Link>
         </div>
         <LogosContainer className="z-30 animate-[spin_3000ms_ease_0ms]">
-          <img  src={reactLogo} alt="react" 
-            className="logo animate-[spin_5s_linear_1000ms_infinite]"/>
+          <div className="animate-scalereact">
+            <img  src={reactLogo} alt="react" 
+              className="logo animate-[spin_2s_linear_1000ms_infinite_alternate]"/>
+          </div>
           <img src={viteLogo} alt="vite" 
             className="logo vite-logo animate-flip" />
         </LogosContainer>

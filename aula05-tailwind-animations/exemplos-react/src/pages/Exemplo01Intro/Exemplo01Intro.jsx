@@ -1,22 +1,22 @@
-import { useEffect } from 'react';
-import { animate } from 'animejs';
+// import { useEffect } from 'react';
+// import { animate } from 'animejs';
 import { ContainerExamples } from '../../styles/ContainerExamples.styeld';
 import "./exemplo01.css"
 
 const Exemplo01Intro = () => {
 
-  useEffect(() => {
-    animate('#circle', { 		//alvo da animação, pode ser mais de um
-      translateX: 100,			//propriedade a ser modificada (camelCase)
-      backgroundColor: '#0f0',	//propriedade css em camelCase
-      borderRadius: '0%',			//propriedade css em camelCase
-      duration: 4000,				//duração em  milisegundos (ms) (animation-duration)
-      alternate: true,		//direção da animação (animation-direction) 
-      loop: true,					//numero de iterações (animation-iteration-count)
-      // ease: 'inBounce'		//função de tempo (animation-timing-function)
-      ease: 'outBounce'		//função de tempo (animation-timing-function)
-    });
-  }, [])
+  // useEffect(() => {
+  //   animate('#circle', { 		//alvo da animação, pode ser mais de um
+  //     translateX: 100,			//propriedade a ser modificada (camelCase)
+  //     backgroundColor: '#0f0',	//propriedade css em camelCase
+  //     borderRadius: '0%',			//propriedade css em camelCase
+  //     duration: 4000,				//duração em  milisegundos (ms) (animation-duration)
+  //     alternate: true,		//direção da animação (animation-direction) 
+  //     loop: true,					//numero de iterações (animation-iteration-count)
+  //     // ease: 'inBounce'		//função de tempo (animation-timing-function)
+  //     ease: 'outBounce'		//função de tempo (animation-timing-function)
+  //   });
+  // }, [])
 
   return (
     <>
@@ -25,7 +25,7 @@ const Exemplo01Intro = () => {
         Exemplos de Introdução a Biblioteca
         <a href="https://animejs.com/documentation/" target="_blank"> AnimeJS</a>
       </h2>
-      <ContainerExamples className="min-w-1/2 w-4/5">
+      <ContainerExamples className="items-start min-w-1/2 w-4/5">
         <div className="nes-container with-title">
           <span className="title">
             Exemplo 1.1
@@ -40,7 +40,7 @@ const Exemplo01Intro = () => {
           {/* <div className="bg-blue-500 hover:bg-blue-900 transition-colors duration-2000 rounded-full w-[40px] h-[40px]  translate-x-[100px]  nes-pointer"></div> */}
           <div className="
                 w-[40px] h-[40px]
-                translate-x-[100px]
+                translate-x-[1px]
                 rounded-full
 
                 bg-blue-500
@@ -52,6 +52,7 @@ const Exemplo01Intro = () => {
                 ease-[cubic-bezier(.71,1.27,.25,-0.53)]	
                 dealy-500
 
+                animate-pong
                 nes-pointer"
                 >
           </div>

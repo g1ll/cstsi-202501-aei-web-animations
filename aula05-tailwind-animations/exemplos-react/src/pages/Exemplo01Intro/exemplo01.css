@@ -8,11 +8,11 @@
 
         0%,
         100% {
-            transform: translateX(0px);
+            transform: translateX(-100px);
         }
 
         50% {
-            transform: translateX(200px);
+            transform: translateX(100px);
         }
     }
 }
