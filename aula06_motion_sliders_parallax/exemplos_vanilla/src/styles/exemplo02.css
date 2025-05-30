@@ -1,0 +1,44 @@
+@import "./colors";
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.examples-containers {
+    margin-top: 5%;
+    width: 50%;
+}
+
+.btn {
+    margin: 15px;
+    width: 200px;
+}
+
+.nes-btn {
+    border-image-repeat: stretch !important;
+}
+
+@theme {
+    /* --animate-rave: rave .05s linear infinite;     */
+    @keyframes rave {
+        0%,
+        100% {
+            fill: red;
+        }
+
+        25% {
+            fill: blue;
+        }
+
+        50% {
+            fill: green;
+        }
+
+        75% {
+            fill: yellow;
+        }
+    }
+}

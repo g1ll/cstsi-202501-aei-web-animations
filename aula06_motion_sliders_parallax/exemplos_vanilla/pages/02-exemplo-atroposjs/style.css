@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.my-atropos {
+    width: 320px;
+    height: 160px;
+
+    /*img{
+				width: 100%;
+				object-fit: contain;
+			}*/
+}

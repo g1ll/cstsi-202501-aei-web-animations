@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+	<!-- Google Font Press Start 2P -->
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<!-- latest -->
+	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+	<link href="./style.css" rel="stylesheet" />
+	<title>CSTSI-AEI Aula 05: Animação Icone SVG com TailwindCss</title>
+</head>
+
+<body>
+	<h2 class="nes-text is-primary">
+		Exemplo de Animação Parallax
+		<a href="#" target="_blank">AtroposJS</a>
+	</h2>
+
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 1:</span>
+		<div id="atropos_animation">
+			<div class="atropos my-atropos">
+				<div class="atropos-scale">
+					<div class="atropos-rotate">
+						<div class="atropos-inner">
+							<div class="p-4">
+								<img class="w-3/4 z-9 rounded-xl object-contain absolute left-10"
+									src="/assets/img/ifsul80anos.jpeg" data-atropos-opacity="1;0">
+								<h1 class="absolute z-20 text-green-700 text-center" data-atropos-opacity="0;1">
+									Animação de Elementos de Interface
+								</h1>
+								<img class="w-20 z-10 rounded-xl top-25 left-30 object-contain absolute"
+									src="/assets/img/logo_tsi.png" data-atropos-opacity="0;1">
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 2:</span>
+		<div id="atropos_animation">
+			<div class="atropos my-atropos-2 w-[320px] h-[160px]">
+				<div class="atropos-scale">
+					<div class="atropos-rotate">
+						<div class="atropos-inner">
+								<div class="flex flex-col h-full justify-center items-center w-full z-9 rounded-xl bg-[url(/assets/img/ifsul80anos.jpeg)] bg-size-[100%_100%] bg-no-repeat"
+									>
+									<h1 class="bg-white rounded-2xl z-20 text-green-700 text-center" data-atropos-opacity="0;1">
+										Animação de Elementos de Interface
+									</h1>
+									<img class="w-20 z-10 rounded-xl top-25 left-30 object-contain "
+										src="/assets/img/logo_tsi.png" data-atropos-opacity="0;1">
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="nes-container with-title examples-containers">
+		<span class="title">Exemplo 3:</span>
+		<div id="atropos_animation">
+			<div class="atropos my-atropos-3 w-[320px] h-[160px]">
+				<div class="atropos-scale">
+					<div class="atropos-rotate">
+						<div class="atropos-inner">
+								<div class="flex flex-col h-full justify-center items-center w-full z-9 rounded-xl bg-[url(/assets/img/ifsul80anos.jpeg)] bg-size-[100%_100%] bg-no-repeat"
+									>
+									<h1 class="bg-white rounded-2xl z-20 text-green-700 text-center" data-atropos-opacity="0;1"
+											data-atropos-offset="-5"
+									>
+										Animação de Elementos de Interface
+									</h1>
+									<img class="w-20 z-10 rounded-xl top-25 left-30 object-contain "
+										src="/assets/img/logo_tsi.png" data-atropos-opacity="0;1"
+										data-atropos-offset="-10"
+										>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<a href="/">
+			<button type="button" title='Voltar ao início!' class="nes-btn is-error btn">Voltar</button>
+		</a>
+	</div>
+	<script type="module" src="./atropos_animations.js"></script>
+
+</body>
+
+</html>

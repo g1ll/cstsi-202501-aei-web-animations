@@ -1,0 +1,18 @@
+@import "../../styles/tailwind.css";
+
+@theme {
+    --color-myblue-500: #0b61ee;
+    --animate-pong: pong 1s ease-in infinite reverse;
+
+    @keyframes pong {
+
+        0%,
+        100% {
+            transform: translateX(-100px);
+        }
+
+        50% {
+            transform: translateX(100px);
+        }
+    }
+}
