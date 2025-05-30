@@ -1,12 +1,8 @@
+import { pages } from './pages';
 import tailwindJsLogo from '/assets/svgs/tailwind.svg?url'
 
-const links = [
-  { path: '01-exemplo-simpleParallax', title: 'SimpleParallax' },
-  { path: '02-exemplo-atroposjs', title: 'Atropos Parallax' },
-  ]
-
 const DOMlist = document.querySelector('ul')
-links.forEach((item,index) =>{ 
+pages.forEach((item,index) =>{ 
   let menuItem =  `Exemplo 0${index+1} - ${(item.title)}`;
   DOMlist.innerHTML += `
   <li>
