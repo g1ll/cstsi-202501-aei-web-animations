@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
 import { Autoplay, EffectCube } from 'swiper/modules'
 import 'swiper/css';
+
 // import 'swiper/css/bundle';
 
-console.log
 
 const swiper = new Swiper('.slider1', {
     direction: 'horizontal',

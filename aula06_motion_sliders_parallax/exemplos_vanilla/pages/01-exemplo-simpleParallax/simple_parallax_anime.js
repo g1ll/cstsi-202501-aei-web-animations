@@ -11,16 +11,17 @@ new simpleParallax(images[0],
 
 new simpleParallax(images[1], {
     scale: 3,
-    orientation: 'left right'
+    orientation: 'right'
 });
 
 new simpleParallax(images[2], {
     orientation: 'down right',
-    scale: 2.5
+    scale: 2.5,
+    delay:.5
 });
 
 new simpleParallax(images[3], {
-    orientation: 'up right',
+    orientation: 'up left',
     scale: 2
 });
 
