@@ -1,5 +1,5 @@
 import { pages } from './pages';
-import tailwindJsLogo from '/assets/svgs/tailwind.svg?url'
+import tailwindJsLogo from '/assets/svgs/swiper-logo.svg?url'
 
 const DOMlist = document.querySelector('ul')
 pages.forEach((item,index) =>{ 
