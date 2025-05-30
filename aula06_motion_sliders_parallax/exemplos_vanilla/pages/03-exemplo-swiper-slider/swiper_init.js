@@ -3,6 +3,7 @@ import { Autoplay, EffectCube } from 'swiper/modules'
 import 'swiper/css';
 
 // import 'swiper/css/bundle';
+import 'swiper/css/effect-cube';
 
 
 const swiper = new Swiper('.slider1', {
@@ -13,13 +14,13 @@ const swiper = new Swiper('.slider1', {
 const swiper2 = new Swiper('.slider2', {
     modules:[
         EffectCube,
-        // Autoplay
+        Autoplay
     ],   
-    direction: 'vertical',
-    // autoplay:{
-    //     pauseOnMouseEnter:true,
-    //     delay:500,
-    // },
+    direction: 'horizontal',
+    autoplay:{
+        pauseOnMouseEnter:true,
+        delay:500,
+    },
     loop: true,
     effect: 'cube',
     speed: 500,
