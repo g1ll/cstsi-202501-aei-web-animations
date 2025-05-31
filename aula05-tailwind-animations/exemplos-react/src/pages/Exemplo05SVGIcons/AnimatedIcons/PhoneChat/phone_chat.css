@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@tailwind theme;
+
+@theme{
+    --animate-phone: phone .1s linear 2 alternate;
+    @keyframes phone {
+        0% {
+            transform: rotate(.1turn);
+        },
+        25% {
+            transform: rotate(.08turn);
+        },
+        37.5%{
+            transform: rotate(.2turn);
+        },
+        50%{
+            transform: rotate(.08turn);
+        },
+        62.5%{
+            transform: rotate(.2turn);
+        },
+        75%{
+             transform: rotate(.08turn);
+        }
+        100% {
+            transform: rotate(0turn);
+        }
+    }
+}

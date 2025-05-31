@@ -4,7 +4,7 @@ import { ContainerExamples } from '../../styles/ContainerExamples.styeld'
 import { useEffect, useRef } from 'react'
 import { animate, createScope, utils } from 'animejs'
 import { SVGatorCSSOnlyForReactJS } from './SVGatorCSSOnlyForReactJS'
-
+import PhoneChat from './AnimatedIcons/PhoneChat/PhoneChat'
 
 
 const Exemplo05SVGIcons = () => {
@@ -17,29 +17,6 @@ const Exemplo05SVGIcons = () => {
 
             const $ = utils.$;
             
-            const anime2 = animate('#phone', {
-                // translateX:200,
-                // translateY:-100,
-                rotate: [
-                    { to: '.1turn', duration: 100 },
-                    { to: '.08turn', duration: 50 },
-                    { to: '.2turn', duration: 50 },
-                    { to: '.08turn', duration: 50 },
-                    { to: '.2turn', duration: 50 },
-                    { to: '.08turn', duration: 50 },
-                    { to: '0turn', duration: 50 },
-                ],
-                alternate: true,
-                duration: 300, 			//duração geral em ms, necessário para o alternate
-                //loop: false, 			//animação em loop (animation-count:infinite)
-                // loopDelay: 200,			//delay entre repetições do loop
-                autoplay: false,		//Inicialiar a animação parada
-                easing: 'inBounce',	//função de tempo  (animation-timing-function)
-                onComplete: () => anime2.reset()
-            });
-
-            self.add('playPhone', () => anime2.play())
-
             //Animação 5.2
 
             const [$squarePath, $jsPath, $ecmaPath] = $('#svg_js_logo path');
@@ -149,18 +126,9 @@ const Exemplo05SVGIcons = () => {
         }
     }, [])
 
-    const handleAnimatePhone = () => {
-        scope.current.methods.playPhone()
-    }
-
     const handleMouseEnterJsAnimate = () => {
         scope.current.methods.playJsLogoAnimation()
     }
-
-    // const handleMouseLeaveJsAnimate = () => {
-    //     scope.current.methods.stopJsLogoAnimation()
-    // }
-
 
     return (
         <>
@@ -173,42 +141,7 @@ const Exemplo05SVGIcons = () => {
             <ContainerExamples ref={rootScope}>
                 <div className="nes-container with-title ">
                     <span className="title">Exemplo 4.1</span>
-                    <div id="svg-container" onClick={handleAnimatePhone} className="nes-pointer">
-                        {/* <?xml version="1.0" encoding="iso-8859-1"?> */}
-                        {/* Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools */}
-                        <svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
-                            <circle style={{ fill: "#91DD5A" }} cx="256" cy="256" r="256" />
-                            <path
-                                style={{ fill: "#7ED63F" }}
-                                d="M256,0c-11.317,0-22.461,0.744-33.391,2.167C348.216,18.53,445.217,125.933,445.217,256
-	s-97.002,237.47-222.609,253.833C233.539,511.256,244.683,512,256,512c141.385,0,256-114.616,256-256S397.385,0,256,0z"
-                            />
-                            <path
-                                style={{ fill: "#FFFFFF" }}
-                                d="M256,434.643c-43,0-84.443-15.458-116.895-43.568c-0.707-0.612-1.607-0.954-2.543-0.954H82.853
-	c-2.759,0-4.647-2.787-3.622-5.349l17.755-44.39c0.419-1.045,0.356-2.216-0.156-3.218c-12.744-24.96-19.474-52.98-19.474-81.164
-	c0-98.968,80.896-179.398,180.037-178.638c97.168,0.745,176.5,80.077,177.244,177.244C435.398,353.747,354.968,434.643,256,434.643z
-	"
-                            />
-                            <path
-                                style={{ fill: "#7ED63F" }}
-                                d="M256,401.252c-35.349,0-69.415-12.853-95.922-36.192l-6.714-5.91
-	c-1.771-1.559-4.049-2.419-6.408-2.419h-16.066c-2.146,0-3.613-2.167-2.816-4.159l4.624-11.558c1.052-2.63,0.902-5.589-0.413-8.099
-	l-5.058-9.662c-10.781-20.598-16.48-43.853-16.48-67.253c0-80.092,65.159-145.251,145.25-145.252
-	c80.099-0.001,145.254,65.155,145.254,145.254C401.251,336.094,336.092,401.252,256,401.252z"
-                            />
-                            <path
-                                id="phone"
-                                style={{ fill: "#FFFFFF" }}
-                                d="M301.441,358.345c-5.258,0-10.3-1.629-14.584-4.712c-49.582-35.676-92.812-78.907-128.491-128.492
-	c-7.202-10.01-6.059-23.643,2.715-32.418l35.886-35.885c7.141-7.141,18.719-7.141,25.859,0l22.15,22.15
-	c7.141,7.141,7.141,18.719,0,25.859l-6.093,6.093c-2.98,2.98-3.869,7.459-2.285,11.364c10.18,25.101,27.997,42.918,53.098,53.098
-	c3.906,1.584,8.383,0.695,11.364-2.285l6.093-6.093c7.141-7.141,18.719-7.141,25.86,0l22.15,22.15c7.141,7.141,7.141,18.719,0,25.86
-	l-35.885,35.885C314.488,355.708,308.154,358.345,301.441,358.345z"
-                            />
-                        </svg>
-                    </div>
+                    <PhoneChat/>
                 </div>
 
 
@@ -272,7 +205,6 @@ const Exemplo05SVGIcons = () => {
                         <SVGatorCSSOnlyForReactJS/>
                     </div>
                 </div>
-
                 <div>
                     <a href="/">
                         <button type="button" title='Voltar ao início!' className="nes-btn is-error btn">Voltar</button>
