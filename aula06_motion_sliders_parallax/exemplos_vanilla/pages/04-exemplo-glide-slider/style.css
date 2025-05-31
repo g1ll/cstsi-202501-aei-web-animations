@@ -1,0 +1,12 @@
+@import "../../src/styles/colors";
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    margin: 15px;
+    width: 200px;
+}

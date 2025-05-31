@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+	<!-- Google Font Press Start 2P -->
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<!-- latest -->
+	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+	<link href="./style.css" rel="stylesheet" />
+	<title>CSTSI-AEI Aula 05: Animação Icone SVG com TailwindCss</title>
+</head>
+
+<body>
+	<h2 class="nes-text is-primary">
+		Exemplo de Animação com
+		<a href="#" target="_blank">SimpleParallax</a>
+	</h2>
+
+	<div class="nes-container with-title  w-3/4 h-300">
+		<span class="title">Exemplo 1:</span>
+		<div class="sp1 flex flex-col h-full justify-start gap-5 items-center w-full">
+			<img class="w-3/4 opacity-50" src="/assets/img/ifsul80anos.jpeg">
+			<img class="w-full " src="/assets/img/logo_tsi.png">
+			<img class="w-3/4" src="/assets/img/ifsul80anosBig.jpeg">
+			<img class="w-3/4" src="/assets/img/logo_tsi.png">
+		</div>
+	</div>
+
+	<div class="nes-container with-title  w-3/4 h-300">
+		<span class="title">Exemplo 2:</span>
+		<div class="sp2 h-full  w-full overflow-hidden absolute">
+			<img class="w-3/4 absolute top-10" src="/assets/img/ifsul80anos.jpeg">
+			<img class="w-1/2 absolute top-70 left-30" src="/assets/img/logo_tsi.png">
+			<img class="w-11/12 absolute top-100"  src="/assets/img/ifsul80anosBig.jpeg">
+			<img class="w-3/4 absolute top-180" src="/assets/img/logo_tsi.png">
+		</div>
+	</div>
+
+	<div>
+		<a href="/">
+			<button type="button" title='Voltar ao início!' class="nes-btn is-error btn">Voltar</button>
+		</a>
+	</div>
+	<script type="module" src="./simple_parallax_anime.js"></script>
+
+</body>
+
+</html>
