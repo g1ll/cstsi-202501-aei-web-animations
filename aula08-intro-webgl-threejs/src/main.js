@@ -6,7 +6,7 @@ pages.forEach((item,index) =>{
   DOMlist.innerHTML += `
   <li>
     <a href="/pages/${item.path}/index.html">
-      <h3 class='hover:bg-primary_bg text-[1rem]! text-2xl w-full lg:mb-5! lg:text-3xl duration-5000 
+      <h3 class='hover:bg-primary_bg text-[1rem]! px-5 text-2xl w-full lg:mb-5! lg:text-3xl duration-5000 
                     hover:bg-primary-500 rounded-2xl hover:duration-1000'>${menuItem}</h3>
     </a>
   </li>

@@ -2,9 +2,10 @@ import * as THREE from 'three'
 import textureImg from '/img/crate.jpg?url'
 
 const renderer = new THREE.WebGLRenderer()
-renderer.setSize(window.innerWidth, window.innerHeight)
+
 const container = document.querySelector('.container3d')
 console.log(container.getBoundingClientRect())
+
 const {width} = container.getBoundingClientRect()
 renderer.setSize(width, width)
 container.appendChild(renderer.domElement)
