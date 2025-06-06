@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/img/tail_favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+	<link href="./src/styles/index.css" rel="stylesheet" />
+	<title>CSTSI-AEI Aula 08: Introdução a WebGL e Biblioteca Threejs</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="">CSTSI - AEI -
+			<a class="" target="_blank" href="#">Aula 08</a>
+		</h1>
+		<ul class="z-20 w-full"></ul>
+		<div class="z-10 absolute pt-30 sm:pt-80 md:pt-100">
+			<canvas id="glcanvas"  class="bg-transparent mt-10 w-full opacity-70" width="640" height="480"></canvas>
+		</div>
+		<div class="z-30 w-full border-red-500">
+			<img src="/img/webgl.png" alt="webgl" class="animate-bounce logo">
+			<img src="/svg/threejs.svg" alt="vite" class="animate-[spin_1s_ease_1s_2] logo">
+		</div>
+	</div>
+	<script type="module" src="src/main.js"></script>
+	<script src="src/webgl/gl-matrix.js"></script>
+	<script src="src/webgl/webgl-demo.js"></script>
+</body>
+
+</html>
