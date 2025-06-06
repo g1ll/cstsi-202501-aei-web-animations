@@ -4,10 +4,10 @@ import textureImg from '/img/crate.jpg?url'
 const renderer = new THREE.WebGLRenderer()
 
 const container = document.querySelector('.container3d')
-console.log(container.getBoundingClientRect())
+const {width,height} = container.getBoundingClientRect()
+console.dir(container.getBoundingClientRect())
 
-const {width} = container.getBoundingClientRect()
-renderer.setSize(width, width)
+renderer.setSize(width, height)
 container.appendChild(renderer.domElement)
 
 const scene = new THREE.Scene()

@@ -1,11 +1,12 @@
 import * as THREE from 'three'
 
 const renderer = new THREE.WebGLRenderer()
-renderer.setSize(window.innerWidth, window.innerHeight)
+
 const container = document.querySelector('.container3d')
-console.log(container.getBoundingClientRect())
-const {width} = container.getBoundingClientRect()
-renderer.setSize(width, width)
+const {width,height} = container.getBoundingClientRect()
+console.dir(container.getBoundingClientRect())
+
+renderer.setSize(width, height)
 container.appendChild(renderer.domElement)
 
 const scene = new THREE.Scene()

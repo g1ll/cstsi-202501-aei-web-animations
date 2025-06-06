@@ -7,11 +7,12 @@ import objFile from '/models/f15c/f15c.obj?url'
 
 let jet //referencia global ao modelo f15
 
-const renderer = new THREE.WebGLRenderer({ alpha: true })
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias:true })
 const container = document.querySelector('.container3d')
-const {width} = container.getBoundingClientRect()
+const {width,height} = container.getBoundingClientRect()
+console.dir(container.getBoundingClientRect())
 
-renderer.setSize(width, width)
+renderer.setSize(width, height)
 container.appendChild(renderer.domElement)
 
 const scene = new THREE.Scene()

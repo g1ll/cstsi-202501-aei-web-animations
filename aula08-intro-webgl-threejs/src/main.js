@@ -11,12 +11,3 @@ pages.forEach((item,index) =>{
     </a>
   </li>
 `})
-
-const DivImages = document.querySelector('ul ~ div')
-console.log(DivImages)
-
-const imgTailwindLogo = document.createElement('img')
-imgTailwindLogo.src = tailwindJsLogo;
-imgTailwindLogo.alt = 'Tailwind Logo'
-imgTailwindLogo.classList.add('animate-pulse');
-DivImages.appendChild(imgTailwindLogo)
