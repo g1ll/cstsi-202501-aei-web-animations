@@ -35,21 +35,25 @@ const cube = new THREE.Mesh(geometry, material)
 
 scene.add(cube)
 
-// cube.position.z = -50;
-// cube.position.x = 50;
-// cube.position.y = 50;
 
-// cube.rotation.x += .5
-// 	cube.rotation.y += .5
-// 	cube.rotation.z += .5
-// renderer.render(scene, camera)
+let indo = true;
+function move() {
+	cube.position.z += indo ? -.5 : .5
+	if (!indo && cube.position.z > 5)
+		indo = true
+	if (indo && cube.position.z < -100)
+		indo = false//vindo
+}
+
 
 const animate=()=>{
     renderer.render(scene, camera)
 	cube.rotation.x += .01
 	cube.rotation.y += .01
 	cube.rotation.z += .01
-	// camera.position.z += .5s
+
+	// move()
+
 	requestAnimationFrame(animate)
 }
 animate()
