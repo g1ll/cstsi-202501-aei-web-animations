@@ -15,7 +15,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1, //Plano proximo
   100//Plano distante
 );
-// let ww = window.innerWidth
+let ww = window.innerWidth
 let zi = 2
 camera.position.z = zi
 //Ajuste da camera de acordo com redimensionamento da tela
@@ -25,13 +25,13 @@ window.addEventListener('resize', ()=>{
   // não muda ao aumentar a tela novamente
   // camera.position.z += (ww - window.innerWidth)*.00001
   //modelar com a divisão (porcentagem da tela)
-  // if(window.innerWidth/ww<.3){
-  //   camera.position.z +=.2
-  // }else{
-  //   camera.position.z = 2
-  // }
+  if(window.innerWidth/ww<.3){
+    camera.position.z +=.2
+  }else{
+    camera.position.z = 2
+  }
   //z inversamente proporcional ao tamanho de tela mais o z inicial
-  // camera.position.z = 1000/window.innerWidth+zi
+  camera.position.z = 1000/window.innerWidth+zi
   renderer.setSize(window.innerWidth, window.innerHeight)
 }, false)
 
@@ -78,7 +78,7 @@ function loadJet(){
         console.log(camera.position.z)
         scene.add(jet)
         console.log(`Carregou ${filename}.obj`)
-        renderer.render(scene, camera)
+        // renderer.render(scene, camera)
         animate()
       })
   })
