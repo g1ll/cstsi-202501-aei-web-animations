@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
@@ -24,7 +23,7 @@ scene.add(light);
 
 //Ponto de Luz
 const plight = new THREE.PointLight(0xffffff, 100);
-plight.position.set(1, 1, 0)
+plight.position.set(5, 1, 0)
 plight.distance = 10
 scene.add(plight);
 
@@ -32,8 +31,8 @@ const helper = new THREE.PointLightHelper(plight)
 scene.add(helper)
 
 
-const modelPath = 'models/suzanne/'
-const objFile = 'suzanne.obj'
+const modelPath = 'models/monkey2/'
+const objFile = 'monkey_blender2.obj'
 
 const manager = new THREE.LoadingManager();
 manager.onProgress = function (item, loaded, total) {
@@ -57,12 +56,13 @@ objLoader.setPath(modelPath)
       return child
     });
     monkey.model = object
+    monkey.model.scale.setScalar(.75)
     scene.add(object)
     animate()
   })
 
 function animate() {
-  // plight.position.x-=.1
+  plight.position.x-=.01
   monkey.model.rotation.y += .01
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
