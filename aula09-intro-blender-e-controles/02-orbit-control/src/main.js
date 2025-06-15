@@ -8,8 +8,6 @@ const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
-
-const texture = new THREE.TextureLoader()
 const scene = new THREE.Scene()
 
 let aspecto = window.innerWidth / window.innerHeight
@@ -41,6 +39,7 @@ manager.onProgress = function (item, loaded, total) {
   console.log(item, loaded, total);
 };
 
+const textureLoader = new THREE.TextureLoader()
 const mtlLoader = new MTLLoader(manager);
 const objLoader = new OBJLoader();
 
@@ -57,6 +56,9 @@ const objLoader = new OBJLoader();
 //       })
 //   })
 
+const skyTexture =  await textureLoader.loadAsync(skyImg)
+scene.background = skyTexture
+
 const material = await mtlLoader.setPath(modelPath).loadAsync(mtlFile)
 material.preload(material)
 objLoader.setMaterials(material)
@@ -64,9 +66,6 @@ const object = await objLoader.setPath(modelPath).loadAsync(objFile)
 object.rotation.x = 0
 object.rotation.y = 1.5
 scene.add(object)
-
-const skyTexture =  await texture.loadAsync(skyImg)
-scene.background = skyTexture
 
 animate()
 
