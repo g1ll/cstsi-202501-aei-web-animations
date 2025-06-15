@@ -17,7 +17,7 @@ const camera = new THREE.PerspectiveCamera(
 	75, //campo de visao vertical
 	aspecto, //aspecto da imagem (Largura/Altura)
 	0.1, //Plano proximo
-	1000//Plano distante
+	100//Plano distante
 );
 camera.position.z = 35
 
@@ -36,16 +36,24 @@ scene.add(cube)
 // 	cube.rotation.y += .5
 // 	cube.rotation.z += .5
 // renderer.render(scene, camera)
+
+
 cube.rotation.x += .5
 cube.rotation.y += .5
+cube.rotation.z += .5
+
+// renderer.render(scene, camera)
+
 const animate=()=>{
-    renderer.render(scene, camera)
-	// cube.rotation.x += .01
-	// cube.rotation.y += .01
-	// cube.rotation.z += .01
-	// camera.position.z += .5s
+   //inputs (controls)
+	cube.rotation.x += .01
+	cube.rotation.y += .01
+	cube.rotation.z += .01
+	renderer.render(scene, camera)
+	// camera.position.z += .5
 	requestAnimationFrame(animate)
 }
+
 animate()
 
 
