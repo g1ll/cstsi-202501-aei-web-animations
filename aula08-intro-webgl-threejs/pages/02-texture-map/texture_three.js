@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import textureImg from '/img/crate.jpg?url'
+import textureImg from '/img/crate.jpg?url'	
 
 const renderer = new THREE.WebGLRenderer()
 
@@ -30,6 +30,7 @@ const texture = new THREE.TextureLoader()
 		console.log('Carregou imagem!')
 		animate()
 	});
+
 const material = new THREE.MeshBasicMaterial(
 	{ map: texture });
 const cube = new THREE.Mesh(geometry, material)
@@ -53,11 +54,12 @@ const animate=()=>{
 	cube.rotation.y += .01
 	cube.rotation.z += .01
 
-	// move()
+	move()
 
 	requestAnimationFrame(animate)
 }
-animate()
+
+// animate() //vai executar antes do load
 
 
 

@@ -10,7 +10,7 @@ let jet //referencia global ao modelo f15
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias:true })
 const container = document.querySelector('.container3d')
 const {width,height} = container.getBoundingClientRect()
-console.dir(container.getBoundingClientRect())
+// console.dir(container.getBoundingClientRect())
 
 renderer.setSize(width, height)
 container.appendChild(renderer.domElement)
@@ -24,7 +24,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1, //Plano proximo
   100//Plano distante
 );
-camera.position.z = 10
+camera.position.z = 7 
 
 //Luz
 var light = new THREE.AmbientLight(0xffffff, 20);
