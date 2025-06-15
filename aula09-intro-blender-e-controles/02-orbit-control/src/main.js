@@ -2,11 +2,14 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
+import skyImg from "/img/sky.png?url"
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
+
+const texture = new THREE.TextureLoader()
 const scene = new THREE.Scene()
 
 let aspecto = window.innerWidth / window.innerHeight
@@ -62,8 +65,10 @@ object.rotation.x = 0
 object.rotation.y = 1.5
 scene.add(object)
 
-animate()
+const skyTexture =  await texture.loadAsync(skyImg)
+scene.background = skyTexture
 
+animate()
 
 function animate() {
   controls.update();

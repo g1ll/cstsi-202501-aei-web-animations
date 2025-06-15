@@ -1,11 +1,13 @@
 import * as THREE from 'three'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
+import jungleImg from "/img/jungle.jpg?url"
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 const scene = new THREE.Scene()
+const texture = new THREE.TextureLoader()
 
 let aspecto = window.innerWidth / window.innerHeight
 const camera = new THREE.PerspectiveCamera(
@@ -58,11 +60,15 @@ objLoader.setPath(modelPath)
     monkey.model = object
     monkey.model.scale.setScalar(.75)
     scene.add(object)
-    animate()
+    texture.load(jungleImg, (textureLoaded) => {
+      console.log('Carregou imagem!')
+      scene.background = textureLoaded
+      animate()
+    });
   })
 
 function animate() {
-  plight.position.x-=.01
+  plight.position.x -= .01
   monkey.model.rotation.y += .01
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
