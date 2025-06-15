@@ -67,10 +67,10 @@ object.rotation.x = 0
 object.rotation.y = 1.5
 scene.add(object)
 
-animate()
-
 function animate() {
   controls.update();
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
 }
+
+animate()
