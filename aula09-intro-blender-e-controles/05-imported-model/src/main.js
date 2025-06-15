@@ -2,9 +2,11 @@ import * as THREE from 'three'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import AppleParkImg from '/imgs/apple-park.jpeg?url'
 
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
@@ -60,6 +62,7 @@ manager.onProgress = function (item, loaded, total) {
 
 const mtlLoader = new MTLLoader(manager);
 const objLoader = new OBJLoader();
+const textureLoader = new THREE.TextureLoader()
 
 let jet
 let anglo = 0
@@ -80,7 +83,11 @@ function loadObj(){
         scene.add(jet)
         console.log(`Carregou ${filename}.obj`)
         // renderer.render(scene, camera)
-        animate()
+        textureLoader.load(AppleParkImg,texture=>{
+          // scene.background = texture;
+          document.body.style.backgroundImage = `url(${AppleParkImg})`
+          animate()
+        })
       })
   })
 }
