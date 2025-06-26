@@ -12,7 +12,7 @@ document.body.appendChild(renderer.domElement)
 
 const scene = new THREE.Scene()
 
-scene.background = new THREE.Color(0x000000)
+// scene.background = new THREE.Color(0x000000)
 
 let aspecto = window.innerWidth / window.innerHeight
 const camera = new THREE.PerspectiveCamera(
@@ -24,6 +24,7 @@ const camera = new THREE.PerspectiveCamera(
 let ww = window.innerWidth
 let zi = 2
 camera.position.z = zi
+
 //Ajuste da camera de acordo com redimensionamento da tela
 window.addEventListener('resize', ()=>{
   camera.aspect = window.innerWidth / window.innerHeight
@@ -64,7 +65,7 @@ const mtlLoader = new MTLLoader(manager);
 const objLoader = new OBJLoader();
 const textureLoader = new THREE.TextureLoader()
 
-let jet
+let macbook
 let anglo = 0
 
 
@@ -75,16 +76,18 @@ function loadObj(){
     objLoader.setMaterials(materials)
     objLoader.setPath(modelPath)
       .load(filename+'.obj', (object) => {
-        jet = object
-        jet.rotation.x = 0
-        jet.rotation.y = 90*Math.PI/180
-        jet.position.z = -.5
+        macbook = object
+        macbook.rotation.x = 0
+        macbook.rotation.y = 90*Math.PI/180
+        macbook.position.z = -.5
         console.log(camera.position.z)
-        scene.add(jet)
+
+        scene.add(macbook)
+
         console.log(`Carregou ${filename}.obj`)
         // renderer.render(scene, camera)
         textureLoader.load(AppleParkImg,texture=>{
-          // scene.background = texture;
+          //scene.background = texture;
           document.body.style.backgroundImage = `url(${AppleParkImg})`
           animate()
         })
