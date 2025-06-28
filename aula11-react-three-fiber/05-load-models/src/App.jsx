@@ -16,9 +16,9 @@ function App() {
   return (
     <div id="canvas-container">
       <Canvas>
-        <ambientLight intensity={15}/>
-        <directionalLight color="white" position={[0, 0, 5]} />
-        <pointLight color="white" position={[0, 2, 2]} intensity={2.5} />
+        <ambientLight intensity={2}/>
+        <directionalLight color="yellow" position={[0, 0, 5]} />
+        <pointLight color="yellow" position={[0, 2, 5]} intensity={2.5} />
         <OrbitControls />
         <JetModel/>
         {/* <Environment background files={[px, nx, py, ny, pz, nz]} /> */}
