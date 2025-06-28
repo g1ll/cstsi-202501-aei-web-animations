@@ -18,7 +18,7 @@ const JetModel = () => {
 
     return (
         <Suspense fallback={null}>
-            <primitive object={obj} />
+            <primitive object={obj} scale={3} />
         </Suspense>
     )
 }
