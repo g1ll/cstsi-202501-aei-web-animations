@@ -11,8 +11,8 @@ function App() {
         <ambientLight intensity={0.1} />
         <directionalLight color="white" position={[0, 0, 5]} />
         <pointLight color="white" position={[0, 2, 2]} intensity={1.5} />
-        {/* <RotatedBox/> */}
-      <LogoIF3d/>
+        {/* <RotatedBox size={3} speed={.1}/> */}
+        <LogoIF3d/>
       </Canvas>
     </div>
   )
