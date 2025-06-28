@@ -30,7 +30,7 @@ function TextureBox({ x, y, z, color, texture }) {
         position-y={y}
         position-x={x}
       >
-        <boxGeometry args={[1, 1, 1]} />
+        <boxGeometry args={[2, 2, 2]} />
         <meshStandardMaterial map={colorMap}/>
       </mesh>
     </Suspense>
