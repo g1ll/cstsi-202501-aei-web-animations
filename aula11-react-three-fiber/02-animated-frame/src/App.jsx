@@ -5,12 +5,14 @@ import { useRef } from 'react'
 
 function RotatedBox() {
 
- const rotateMesh = useRef()
-  useFrame(() => {
-    const rotateY = rotateMesh.current.rotation.y;
-    rotateMesh.current.rotation.y = rotateY + 0.01
+  const rotateMesh = useRef()
+  
+  useFrame(({clock}) => {
+    // const rotateY = rotateMesh.current.rotation.y;
+    // rotateMesh.current.rotation.y = rotateY + 0.01
+    rotateMesh.current.rotation.y = Math.sin(clock.elapsedTime)
+    console.log(Math.sin(clock.elapsedTime)*5)
   })
-
 
   return (
     <mesh ref={rotateMesh}>
@@ -25,10 +27,10 @@ function App() {
   return (
     <div id="canvas-container">
       <Canvas>
-        <ambientLight intensity={0.1} />
+        <ambientLight intensity={0.5} />
         <directionalLight color="white" position={[0, 0, 5]} />
         <pointLight color="white" position={[0, 2, 2]} intensity={1.5} />
-        <RotatedBox/>
+        <RotatedBox />
       </Canvas>
     </div>
   )
