@@ -35,7 +35,8 @@ scene.add(plight);
 
 //Textura esférica estrelas: https://svs.gsfc.nasa.gov/4851/
 const skyTexture = await new THREE.TextureLoader().loadAsync(
-  "img/milk-way-2020-nasa-4k.jpg"
+  // "img/milk-way-2020-nasa-4k.jpg"
+  "img/NightSkyHDRI014_4K-TONEMAPPED.jpg"  //https://ambientcg.com/view?id=NightSkyHDRI014
 );
 // scene.background = skyTexture; //Imagem de fundo, não é um skyBox
 const skyGeometry = new THREE.SphereGeometry(10000, 60, 64);
