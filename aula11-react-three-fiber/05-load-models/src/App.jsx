@@ -15,10 +15,10 @@ function App() {
 
   return (
     <div id="canvas-container">
-      <Canvas>
-        <ambientLight intensity={2}/>
-        <directionalLight color="yellow" position={[0, 0, 5]} />
-        <pointLight color="yellow" position={[0, 2, 5]} intensity={2.5} />
+      <Canvas camera={{rotation:[0,1,0], position:[.5,1,-4]}}>
+        <ambientLight intensity={3}/>
+        <directionalLight color="yellow" position={[0, 0, 1]} intensity={3} />
+        <pointLight color="yellow" position={[0, 1, 1]} intensity={2.5} />
         <OrbitControls />
         <JetModel/>
         {/* <Environment background files={[px, nx, py, ny, pz, nz]} /> */}
@@ -33,7 +33,7 @@ function App() {
               'rt.png'
             ]}
             path="/img/skyboxes/sunset/"
-         /> 
+         />
       </Canvas>
     </div>
   )
